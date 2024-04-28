@@ -1,0 +1,24 @@
+.shoot form {
+  display: flex;
+  flex-direction: column;
+}
+.shoot .sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.shoot .editor {
+  height: 100%;
+}
+.shoot form {
+  display: flex;
+  flex-direction: column;
+}
+.shoot .sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.shoot .editor {
+  height: 100%;
+}
