@@ -2,9 +2,29 @@
 
   {{!-- Sheet Header --}}
   <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+
+    <aside class="sidebar"><img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+      <select id="pcclass" value="{{system.primaryclass}}" name="pokemonta3.PCClass" localize="true">
+        <option value="ace">Ace Trainer</option>
+        <option value="brd">Breeder</option>
+        <option value="crd">Coordinator</option>
+        <option value="rng">Ranger</option>
+        <option value="rsh">Researcher</option>
+        <option value="mar">Martial Artist</option>
+        <option value="psy">Psychic</option>         
+        <option value="pok">Pokemon</option>        
+      </select>  
+      <input name="secondclass" type="text" value="Second Class" placeholder=" "/>     
+      <input name="thirdclass" type="text" value="Third Class" placeholder=" "/>     
+      <input name="fourthclass" type="text" value="Fourth Class" placeholder=" "/>     
+    </aside>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+      <h1 class="charname">
+         {{!-- PC Name selector --}}
+      <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+      
+      </h1>
+
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  --}}
@@ -38,6 +58,7 @@
 
       </div>
     </div>
+
   </header>
 
   {{!-- Sheet Tab Navigation --}}

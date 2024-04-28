@@ -9,15 +9,17 @@
           "max": 20
         },
         "honor": {
-          "value": 5,
-          "min": 0,
-          "max": 5
+          "value": 0
         },
         "biography": ""
       }
     },
     "trainer": {
       "templates": ["base"],
+      "primaryclass": "",
+      "secondaryclass": "",
+      "trinaryclass":"",
+      "fourthclass":"",
       "attributes": {
         "level": {
           "value": 1

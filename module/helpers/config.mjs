@@ -20,4 +20,15 @@ pokemonta3.statAbbreviations = {
   spd: 'pokemonta3.Stat.spd.abbr',
 };
 
-pokemonta3.skills
+pokemonta3.PCClass = {
+  ace: 'pokemonta3.PCClass.ace',
+  brd: 'pokemonta3.PCClass.brd',
+  crd: 'pokemonta3.PCClass.crd',
+  rng: 'pokemonta3.PCClass.rng',
+  rsh: 'pokemonta3.PCClass.rsh',
+  mar: 'pokemonta3.PCClass.mar',
+  psy: 'pokemonta3.PCClass.psy',
+  pok: 'pokemonta3.PCClass.pok'
+}
+ 
+

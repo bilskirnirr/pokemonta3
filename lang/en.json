@@ -5,7 +5,18 @@
       "def": { "long": "Defense", "abbr": "def" },
       "satk": { "long": "Special Attack", "abbr": "satk" },
       "sdef": { "long": "Special Defense", "abbr": "sdef" },
-      "spd": { "long": "Speed", "abbr": "spd" }
+      "spd": { "long": "Speed", "abbr": "spd" },
+      "hnr": { "long": "Honor", "abbr": "hnr" }
+    },
+    "PCClass": {
+      "ace": { "long": "Ace Trainer", "abbr": "ace" },
+      "brd": { "long": "Breeder", "abbr": "brd" },
+      "crd": { "long": "Coordinator", "abbr": "crd" },
+      "rng": { "long": "Ranger", "abbr": "rng" },
+      "rsh": { "long": "Researcher", "abbr": "rsh" },
+      "mar": { "long": "Martial Artist", "abbr": "mar" },
+      "psy": { "long": "Psychic", "abbr": "psy" },
+      "pok": { "long": "Pokemon", "abbr": "pok" }
     },
     "Skills": {
       "acro": { "long": "Acrobatics(SPD)", "abbr": "acro" },
@@ -26,6 +37,38 @@
       "prog": { "long": "Programming (SpATK)", "abbr": "prog" },
       "sloh": { "long": "Sleight of Hand (SPD)", "abbr": "sloh" },
       "stea": { "long": " Stealth (SPD)", "abbr": "stea" }
+    },
+    "Typing": {
+      "nor": { "long": "Normal", "abbr": "nor" },
+      "fir": { "long": "Fire", "abbr": "fir" },
+      "wat": { "long": "Water", "abbr": "wat" },
+      "ele": { "long": "Electric", "abbr": "ele" },
+      "gra": { "long": "Grass", "abbr": "gra" },
+      "ice": { "long": "Ice", "abbr": "ice" },
+      "fig": { "long": "Fighting", "abbr": "fig" },
+      "poi": { "long": "Poison", "abbr": "poi" },
+      "gro": { "long": "Ground", "abbr": "gro" },
+      "fly": { "long": "Flying", "abbr": "fly" },
+      "psy": { "long": "Psychic", "abbr": "psy" },
+      "bug": { "long": "Bug", "abbr": "bug" },
+      "roc": { "long": "Rock", "abbr": "roc" },
+      "gho": { "long": "Ghost", "abbr": "gho" },
+      "dra": { "long": "Dragon", "abbr": "dra" },
+      "dar": { "long": "Dark", "abbr": "dar" },
+      "ste": { "long": "Steel", "abbr": "ste" },
+      "fai": { "long": "Fairy", "abbr": "fai" }
+    },
+    "Affliction": {
+      "slp": { "long": "Asleep", "abbr": "slp" },
+      "brn": { "long": "Burned", "abbr": "brn" },
+      "cnf": { "long": "Confused", "abbr": "cnf" },
+      "crs": { "long": "Cursed", "abbr": "crs" },
+      "frz": { "long": "Frozen", "abbr": "frz" },
+      "ift": { "long": "Infatuated", "abbr": "ift" },
+      "par": { "long": "Paralyzed", "abbr": "par" },
+      "psn": { "long": "Poisoned", "abbr": "psn" },
+      "tox": { "long": "Toxified", "abbr": "tox" },
+      "stn": { "long": "Stunned", "abbr": "stn" }
     },
     "SheetLabels": {
       "Actor": "pokemonta3 Actor Sheet",

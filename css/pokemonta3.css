@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* importing pokemon fonts */
+
+
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
 }
 
+.pcclass {
+  width: 20px;
+}
 
 
 
@@ -232,11 +239,13 @@
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
+  display:inline;
 }
 .pokemonta3 .sheet-header h1.charname input {
-  width: 100%;
+  width: 50%;
   height: 100%;
   margin: 0;
+  display:inline;
 }
 .pokemonta3 .sheet-tabs {
   flex: 0;

@@ -57,6 +57,9 @@ export class Pokemonta3ActorSheet extends ActorSheet {
       this._prepareItems(context);
     }
 
+    // Add Dropdown for class selection <<---- 
+    context.optionObj = CONFIG.pokemonta3.dropdownChoices;
+  
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
 
