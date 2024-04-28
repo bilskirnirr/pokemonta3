@@ -4,7 +4,7 @@ export const pokemonta3 = {};
  * The set of Stat Scores used within the system.
  * @type {Object}
  */
-pokemonta3.abilities = {
+pokemonta3.stats = {
   atk: 'pokemonta3.Stat.atk.long',
   satk: 'pokemonta3.Stat.satk.long',
   def: 'pokemonta3.Stat.def.long',
@@ -19,3 +19,5 @@ pokemonta3.statAbbreviations = {
   sdef: 'pokemonta3.Stat.sdef.abbr',
   spd: 'pokemonta3.Stat.spd.abbr',
 };
+
+pokemonta3.skills

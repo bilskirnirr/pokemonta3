@@ -48,9 +48,9 @@ export class Pokemonta3Actor extends Actor {
     const systemData = actorData.system;
 
     // Loop through stat scores, and add their modifiers to our sheet output.
-    for (let [key, stat] of Object.entries(systemData.abilities)) {
+    for (let [key, stat] of Object.entries(systemData.stats)) {
       // Calculate the modifier using d20 rules.
-      stat.mod = Math.floor((stat.value - 10) / 2);
+      stat.mod = Math.floor((stat.value) / 2);
     }
   }
 
@@ -87,8 +87,8 @@ export class Pokemonta3Actor extends Actor {
 
     // Copy the stat scores to the top level, so that rolls can use
     // formulas like `@atk.mod + 4`.
-    if (data.abilities) {
-      for (let [k, v] of Object.entries(data.abilities)) {
+    if (data.stats) {
+      for (let [k, v] of Object.entries(data.stats)) {
         data[k] = foundry.utils.deepClone(v);
       }
     }

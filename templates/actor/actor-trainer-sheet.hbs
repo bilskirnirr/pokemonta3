@@ -26,8 +26,6 @@
           <label for="system.honor.value" class="resource-label">Honor</label>
           <div class="resource-content flexrow flex-center flex-between">
           <input type="text" name="system.honor.value" value="{{system.honor.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="system.honor.max" value="{{system.honor.max}}" data-dtype="Number"/>
           </div>
         </div>
 
@@ -48,7 +46,7 @@
     <a class="item" data-tab="features">Features</a>
     <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="items">Items</a>
-    <a class="item" data-tab="spells">Spells</a>
+    {{!-- Commenting out spells  <a class="item" data-tab="spells">Spells</a>    --}} 
     <a class="item" data-tab="effects">Effects</a>
   </nav>
 
@@ -63,12 +61,12 @@
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
-          <div class="abilities flexcol">
-            {{#each system.abilities as |stat key|}}
+          <div class="stats flexcol">
+            {{#each system.stats as |stat key|}}
             <div class="stat flexrow flex-group-center">
-              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
-              <input type="text" name="system.abilities.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
-              <span class="stat-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
+              <label for="system.stats.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
+              <input type="text" name="system.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
+              <span class="stat-mod rollable" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
             </div>
             {{/each}}
           </div>

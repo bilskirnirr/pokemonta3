@@ -7,6 +7,26 @@
       "sdef": { "long": "Special Defense", "abbr": "sdef" },
       "spd": { "long": "Speed", "abbr": "spd" }
     },
+    "Skills": {
+      "acro": { "long": "Acrobatics(SPD)", "abbr": "acro" },
+      "athl": { "long": "Athletics (ATK)", "abbr": "athl" },
+      "bluf": { "long": "Bluff / Deception (SpDEF)", "abbr": "bluf" },
+      "conc": { "long": "Concentration (DEF)", "abbr": "conc" },
+      "cons": { "long": "Constitution (DEF)", "abbr": "cons" },
+      "dipl": { "long": "Diplomacy / Persuasion (SpDEF)", "abbr": "dipl" },
+      "engi": { "long": "Engineering / Operation (SpATK)", "abbr": "engi" },
+      "hist": { "long": "History (SpATK)", "abbr": "hist" },
+      "insi": { "long": "Insight (SpDEF)", "abbr": "insi" },
+      "inve": { "long": "Investigate (SpATK)", "abbr": "inve" },
+      "medi": { "long": "Medicine (SpATK)", "abbr": "medi" },
+      "natu": { "long": "Nature (SpATK)", "abbr": "natu" },
+      "perc": { "long": "Perception (SpDEF)", "abbr": "perc" },
+      "perf": { "long": "Perform (SpDEF)", "abbr": "perf" },
+      "pokh": { "long": "Pokémon Handling (SpDEF)", "abbr": "pokh" },
+      "prog": { "long": "Programming (SpATK)", "abbr": "prog" },
+      "sloh": { "long": "Sleight of Hand (SPD)", "abbr": "sloh" },
+      "stea": { "long": " Stealth (SPD)", "abbr": "stea" }
+    },
     "SheetLabels": {
       "Actor": "pokemonta3 Actor Sheet",
       "Item": "pokemonta3 Item Sheet"

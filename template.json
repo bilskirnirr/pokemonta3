@@ -4,9 +4,9 @@
     "templates": {
       "base": {
         "health": {
-          "value": 10,
+          "value": 20,
           "min": 0,
-          "max": 10
+          "max": 20
         },
         "honor": {
           "value": 5,
@@ -23,21 +23,21 @@
           "value": 1
         }
       },
-      "abilities": {
+      "stats": {
         "atk": {
-          "value": 10
+          "value": 1
         },
         "satk": {
-          "value": 10
+          "value": 1
         },
         "def": {
-          "value": 10
+          "value": 1
         },
         "sdef": {
-          "value": 10
+          "value": 1
         },
         "spd": {
-          "value": 10
+          "value": 1
         }
       }
     },

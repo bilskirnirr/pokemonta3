@@ -79,8 +79,8 @@ export class Pokemonta3ActorSheet extends ActorSheet {
    */
   _prepareTrainerData(context) {
     // Handle stat scores.
-    for (let [k, v] of Object.entries(context.system.abilities)) {
-      v.label = game.i18n.localize(CONFIG.pokemonta3.abilities[k]) ?? k;
+    for (let [k, v] of Object.entries(context.system.stats)) {
+      v.label = game.i18n.localize(CONFIG.pokemonta3.stats[k]) ?? k;
     }
   }
 
@@ -171,7 +171,7 @@ export class Pokemonta3ActorSheet extends ActorSheet {
       onManageActiveEffect(ev, document);
     });
 
-    // Rollable abilities.
+    // Rollable stats.
     html.on('click', '.rollable', this._onRoll.bind(this));
 
     // Drag events for macros.

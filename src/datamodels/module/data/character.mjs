@@ -14,7 +14,7 @@ export default class Pokemonta3Trainer extends Pokemonta3ActorBase {
     });
 
     // Iterate over stat names and create a new SchemaField for each.
-    schema.abilities = new fields.SchemaField(Object.keys(CONFIG.pokemonta3.abilities).reduce((obj, stat) => {
+    schema.stats = new fields.SchemaField(Object.keys(CONFIG.pokemonta3.stats).reduce((obj, stat) => {
       obj[stat] = new fields.SchemaField({
         value: new fields.NumberField({ ...requiredInteger, initial: 10, min: 0 }),
         mod: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
@@ -28,11 +28,11 @@ export default class Pokemonta3Trainer extends Pokemonta3ActorBase {
 
   prepareDerivedData() {
     // Loop through stat scores, and add their modifiers to our sheet output.
-    for (const key in this.abilities) {
+    for (const key in this.stats) {
       // Calculate the modifier using d20 rules.
-      this.abilities[key].mod = Math.floor((this.abilities[key].value - 10) / 2);
+      this.stats[key].mod = Math.floor((this.stats[key].value - 10) / 2);
       // Handle stat label localization.
-      this.abilities[key].label = game.i18n.localize(CONFIG.pokemonta3.abilities[key]) ?? key;
+      this.stats[key].label = game.i18n.localize(CONFIG.pokemonta3.stats[key]) ?? key;
     }
   }
 
@@ -41,8 +41,8 @@ export default class Pokemonta3Trainer extends Pokemonta3ActorBase {
 
     // Copy the stat scores to the top level, so that rolls can use
     // formulas like `@atk.mod + 4`.
-    if (this.abilities) {
-      for (let [k,v] of Object.entries(this.abilities)) {
+    if (this.stats) {
+      for (let [k,v] of Object.entries(this.stats)) {
         data[k] = foundry.utils.deepClone(v);
       }
     }
