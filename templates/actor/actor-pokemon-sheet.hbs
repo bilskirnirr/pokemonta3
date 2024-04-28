@@ -66,10 +66,6 @@
     <div class="tab features" data-group="primary" data-tab="features">
       <section class="grid grid-3col">
         <aside class="sidebar">
-          <label for="system.primaryclass">Primary Class</label>
-          <select class="pimaryclass" name="system.primaryclass">
-            {{selectOptions optionObj selected=system.primaryclass localize=true}}
-          </select>
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
@@ -81,18 +77,6 @@
               <span class="stat-mod rollable" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
             </div>
             {{/each}}
-          </div>
-          <label for="system.secondaryclass">Other Classes</label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder=" "/>     
-          </div>
-          <label for="system.origin">Origin</label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input name="system.origin" type="text" value="{{system.origin}}" placeholder=" "/>     
-          </div>
-          <label for="system.credits">Credits</label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input name="system.credits" type="text" value="{{system.credits}}" placeholder=" "/>     
           </div>
         </aside>
 

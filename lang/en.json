@@ -92,7 +92,8 @@
   "TYPES": {
     "Actor": {
       "trainer": "Trainer",
-      "npc": "NPC"
+      "npc": "NPC",
+      "pokemon": "Pokemon"
     },
     "Item": {
       "item": "Item",

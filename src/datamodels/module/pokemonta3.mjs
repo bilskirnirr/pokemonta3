@@ -43,7 +43,8 @@ Hooks.once('init', function () {
   // with the Trainer/NPC as part of super.defineSchema()
   CONFIG.Actor.dataModels = {
     trainer: models.Pokemonta3Trainer,
-    npc: models.Pokemonta3NPC
+    npc: models.Pokemonta3NPC,
+    pokemon: models.Pokemonta3Pokemon
   }
   CONFIG.Item.documentClass = Pokemonta3Item;
   CONFIG.Item.dataModels = {

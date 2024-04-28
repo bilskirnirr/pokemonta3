@@ -36,6 +36,7 @@ export class Pokemonta3Actor extends Actor {
     // things organized.
     this._prepareTrainerData(actorData);
     this._prepareNpcData(actorData);
+    this._preparePokemonData(actorData);
   }
 
   /**
@@ -53,6 +54,22 @@ export class Pokemonta3Actor extends Actor {
       stat.mod = Math.floor((stat.value) / 2);
     }
   }
+
+    /**
+   * Prepare pokemon type specific data
+   */
+    _preparePokemonData(actorData) {
+      if (actorData.type !== 'pokemon') return;
+  
+      // Make modifications to data here. For example:
+      const systemData = actorData.system;
+  
+      // Loop through stat scores, and add their modifiers to our sheet output.
+      for (let [key, stat] of Object.entries(systemData.stats)) {
+        // Calculate the modifier using d20 rules.
+        stat.mod = Math.floor((stat.value) / 2);
+      }
+    }
 
   /**
    * Prepare NPC type specific data.
@@ -75,6 +92,7 @@ export class Pokemonta3Actor extends Actor {
     // Prepare trainer roll data.
     this._getTrainerRollData(data);
     this._getNpcRollData(data);
+    this._getPokemonRollData(data);
 
     return data;
   }
@@ -98,6 +116,26 @@ export class Pokemonta3Actor extends Actor {
       data.lvl = data.attributes.level.value ?? 0;
     }
   }
+
+    /**
+   * Prepare pokemon roll data.
+   */
+    _getPokemonRollData(data) {
+      if (this.type !== 'pokemon') return;
+  
+      // Copy the stat scores to the top level, so that rolls can use
+      // formulas like `@atk.mod + 4`.
+      if (data.stats) {
+        for (let [k, v] of Object.entries(data.stats)) {
+          data[k] = foundry.utils.deepClone(v);
+        }
+      }
+  
+      // Add level for easier access, or fall back to 0.
+      if (data.attributes.level) {
+        data.lvl = data.attributes.level.value ?? 0;
+      }
+    }
 
   /**
    * Prepare NPC roll data.

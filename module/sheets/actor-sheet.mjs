@@ -52,6 +52,12 @@ export class Pokemonta3ActorSheet extends ActorSheet {
       this._prepareTrainerData(context);
     }
 
+    // Prepare pokemon data and items.
+    if (actorData.type == 'pokemon') {
+      this._prepareItems(context);
+      this._preparePokemonData(context);
+    }
+
     // Prepare NPC data and items.
     if (actorData.type == 'npc') {
       this._prepareItems(context);
@@ -86,6 +92,14 @@ export class Pokemonta3ActorSheet extends ActorSheet {
       v.label = game.i18n.localize(CONFIG.pokemonta3.stats[k]) ?? k;
     }
   }
+
+  _preparePokemonData(context) {
+    // Handle stat scores.
+    for (let [k, v] of Object.entries(context.system.stats)) {
+      v.label = game.i18n.localize(CONFIG.pokemonta3.stats[k]) ?? k;
+    }
+  }
+
 
   /**
    * Organize and classify Items for Trainer sheets.
