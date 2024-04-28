@@ -3,10 +3,42 @@
   {{!-- Sheet Header --}}
   <header class="sheet-header">
 
-      {{!-- Image --}}
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
 
-      {{!-- Name/basic Stats Info --}}
+    <div class="header-fields">
+      <h1 class="charname">
+        {{!-- Classes --}}
+      <select class="pimaryclass" name="system.primaryclass">
+        {{selectOptions optionObj selected=system.primaryclass localize=true}}
+      </select>
+      </h1>
+
+      <div class="resources grid grid-3col">
+
+      <div class="resource flex-group-center">
+        <label for="system.secondaryclass" class="resource-label">Second Class</label>
+        <div class="resource-content flexrow flex-center flex-between">
+        <input name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder=" "/>     
+        </div>
+      </div>
+
+      <div class="resource flex-group-center">
+        <label for="system.secondaryclass" class="resource-label">Third Class</label>
+        <div class="resource-content flexrow flex-center flex-between">
+        <input name="system.trinaryclass" type="text" value="{{system.trinaryclass}}" placeholder=" "/>     
+        </div>
+      </div>
+
+      <div class="resource flex-group-center">
+        <label for="system.secondaryclass" class="resource-label">Fourth Class</label>
+        <div class="resource-content flexrow flex-center flex-between">
+        <input name="system.fourthclass" type="text" value="{{system.fourthclass}}" placeholder=" "/>     
+        </div>
+      </div>
+
+      </div>
+    </div>
+
     <div class="header-fields">
       <h1 class="charname">
          {{!-- PC Name selector --}}
@@ -53,7 +85,7 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="features">Features</a>
-    <a class="item" data-tab="description">Biography</a>
+    <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="items">Items</a>
     {{!-- Commenting out spells  <a class="item" data-tab="spells">Spells</a>    --}} 
     <a class="item" data-tab="effects">Effects</a>
@@ -66,10 +98,7 @@
     <div class="tab features" data-group="primary" data-tab="features">
       <section class="grid grid-3col">
         <aside class="sidebar">
-          <label for="system.primaryclass">Primary Class</label>
-          <select class="pimaryclass" name="system.primaryclass">
-            {{selectOptions optionObj selected=system.primaryclass localize=true}}
-          </select>
+
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
@@ -81,18 +110,6 @@
               <span class="stat-mod rollable" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
             </div>
             {{/each}}
-          </div>
-          <label for="system.secondaryclass">Other Classes</label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder=" "/>     
-          </div>
-          <label for="system.origin">Origin</label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input name="system.origin" type="text" value="{{system.origin}}" placeholder=" "/>     
-          </div>
-          <label for="system.credits">Credits</label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input name="system.credits" type="text" value="{{system.credits}}" placeholder=" "/>     
           </div>
         </aside>
 

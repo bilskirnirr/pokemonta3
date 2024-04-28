@@ -5,11 +5,11 @@ export const pokemonta3 = {};
  * @type {Object}
  */
 pokemonta3.stats = {
-  atk: 'pokemonta3.Stat.atk.long',
-  satk: 'pokemonta3.Stat.satk.long',
-  def: 'pokemonta3.Stat.def.long',
-  sdef: 'pokemonta3.Stat.sdef.long',
-  spd: 'pokemonta3.Stat.spd.long',
+  atk: 'pokemonta3.Stat.atk',
+  satk: 'pokemonta3.Stat.satk',
+  def: 'pokemonta3.Stat.def',
+  sdef: 'pokemonta3.Stat.sdef',
+  spd: 'pokemonta3.Stat.spd',
 };
 
 pokemonta3.statAbbreviations = {

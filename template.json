@@ -11,6 +11,23 @@
         "honor": {
           "value": 0
         },
+        "stats": {
+          "atk": {
+            "value": 1
+          },
+          "satk": {
+            "value": 1
+          },
+          "def": {
+            "value": 1
+          },
+          "sdef": {
+            "value": 1
+          },
+          "spd": {
+            "value": 1
+          }
+        },
         "biography": ""
       }
     },
@@ -18,8 +35,8 @@
       "templates": ["base"],
       "primaryclass": "",
       "secondaryclass": "",
-      "trinaryclass":"",
-      "fourthclass":"",
+      "origin":"",
+      "credits": " ",
       "attributes": {
         "level": {
           "value": 1
