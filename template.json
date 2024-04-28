@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["trainer", "npc"],
+    "types": ["trainer", "npc", "pokemon"],
     "templates": {
       "base": {
         "health": {
@@ -63,7 +63,39 @@
     "npc": {
       "templates": ["base"],
       "cr": 0
+    },
+    "pokemon": {
+      "templates": ["base"],
+      "species" : " ",
+      "sex" : " ",
+      "primarytyping": "None",
+      "secondarytyping:": "None",
+      "diet": " ",
+      "egggroup": "mystery",
+      "contest": {
+        "atk": {
+          "value": 0
+        },
+        "satk": {
+          "value": 0
+        },
+        "def": {
+          "value": 0
+        },
+        "sdef": {
+          "value": 0
+        },
+        "spd": {
+          "value": 0
+        }
+      },
+      "helditem": "None",
+      "skills": "None",
+      "statpassives": "None",
+      "abilitypassives": "None",
+      "moves": "None"
     }
+
   },
   "Item": {
     "types": ["item", "feature", "spell"],
