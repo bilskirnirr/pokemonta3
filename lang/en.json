@@ -1,0 +1,40 @@
+{
+  "pokemonta3": {
+    "Stat": {
+      "atk": { "long": "Attack", "abbr": "atk" },
+      "def": { "long": "Defense", "abbr": "def" },
+      "satk": { "long": "Special Attack", "abbr": "satk" },
+      "sdef": { "long": "Special Defense", "abbr": "sdef" },
+      "spd": { "long": "Speed", "abbr": "spd" }
+    },
+    "SheetLabels": {
+      "Actor": "pokemonta3 Actor Sheet",
+      "Item": "pokemonta3 Item Sheet"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    }
+  },
+
+  "TYPES": {
+    "Actor": {
+      "trainer": "Trainer",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "Actor": {
+    "types": ["trainer", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "honor": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "biography": ""
+      }
+    },
+    "trainer": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "abilities": {
+        "atk": {
+          "value": 10
+        },
+        "satk": {
+          "value": 10
+        },
+        "def": {
+          "value": 10
+        },
+        "sdef": {
+          "value": 10
+        },
+        "spd": {
+          "value": 10
+        }
+      }
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    }
+  },
+  "Item": {
+    "types": ["item", "feature", "spell"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @atk.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    }
+  }
+}
