@@ -35,8 +35,10 @@
       "templates": ["base"],
       "primaryclass": "",
       "secondaryclass": "",
+      "thirdclass": "",
+      "fourthclass": "",
       "origin":"",
-      "credits": " ",
+      "credits": "",
       "attributes": {
         "level": {
           "value": 1

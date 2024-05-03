@@ -1,102 +1,48 @@
-<form class="{{cssClass}} {{actor.type}} gridcontainer" autocomplete="off">
+<form class="{{cssClass}} {{actor.type}}  " autocomplete="off">
+  <div class="sidebar"> {{!-- Side Bar--}}
 
-  <div class="mainbar">
-    <nav class="right sheet-tabs tabs" data-group="primary">
-      {{!-- Default tab is specified in actor-sheet.mjs --}}
-      <a class="fontNav" data-tab="features">Features</a>
-      <a class="fontNav" data-tab="description">Biography</a>
-      <a class="fontNav" data-tab="items">Items</a>
-      {{!-- Commenting out spells  <a class="item" data-tab="spells">Spells</a>    --}} 
-      <a class="fontNav" data-tab="effects">Effects</a>
-    </nav>
+    <h1 class="{{system.primaryclass}}back PCsheet">  {{!-- Primary Class Selector --}}
+      <select class="{{system.primaryclass}}back" name="system.primaryclass">
+        {{selectOptions optionObj selected=system.primaryclass localize=true}}
+      </select>
+    </h1>
 
-    {{!-- Sheet Body --}}
-    <section class="right sheet-body">
+    {{!-- Trainer image --}}
+    <img class="{{system.primaryclass}}back PCsheet" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="170"/>  
 
-      {{!-- Owned Features Tab --}}
-      <div class="tab features" data-group="primary" data-tab="features">
-        <section class="grid grid-3col">
-          <aside class="resource-content">
-            <label for="system.primaryclass">Primary Class</label>
-            <select class="pimaryclass" name="system.primaryclass">
-              {{selectOptions optionObj selected=system.primaryclass localize=true}}
-            </select>
-            {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-            use both the "grid" and "grid-Ncol" class where "N" can be any number
-            from 1 to 12 and will create that number of columns.  --}}
-            <div class="stats flexcol">
-              {{#each system.stats as |stat key|}}
-              <div class="stat flexrow flex-group-center">
-                <label for="system.stats.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
-                <input type="text" name="system.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
-                <span class="stat-mod rollable" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
-              </div>
-              {{/each}}
-            </div>
-            <label for="system.secondaryclass">Other Classes</label>
-            <div class="resource-content flexrow flex-center flex-between">
-              <input name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder=" "/>     
-            </div>
-            <label for="system.origin">Origin</label>
-            <div class="resource-content flexrow flex-center flex-between">
-              <input name="system.origin" type="text" value="{{system.origin}}" placeholder=" "/>     
-            </div>
-            <label for="system.credits">Credits</label>
-            <div class="resource-content flexrow flex-center flex-between">
-              <input name="system.credits" type="text" value="{{system.credits}}" placeholder=" "/>     
-            </div>
-          </aside>
+    {{!-- Trainer Name --}}
+    <input class="PCsheet" id="darkinput" name="name" type="text" value="{{actor.name}}" placeholder="Trainer Name"/>
 
-          {{!-- For the main features list, span the right two columns --}}
-          <section class="main grid-span-2">
-            {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
-            {{> "systems/pokemonta3/templates/actor/parts/actor-features.hbs"}}
-          </section>
-
-        </section>
+    {{!-- Trainer Stats --}}
+    <div class="statbox" id="{{system.primaryclass}}font" >
+      {{#each system.stats as |stat key|}}
+      <div class="stats">
+        <label class="statname rollable" id="rollable" for="system.stats.{{key}}.value"  data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
+        <input class="statinput" type="text" name="system.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
+        <span class="stat-mod rollable" id="rollable" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
       </div>
+      {{/each}}
+    </div>
 
-      {{!-- Biography Tab --}}
-      <div class="tab biography" data-group="primary" data-tab="description">
-        {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-        {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
-      </div>
+        {{!-- Other Classes --}}
+    <input name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder="Second Class"/>
+    <input name="system.thirdclass" type="text" value="{{system.thirdclass}}" placeholder="Third Class"/>
+    <input name="system.fourthclass" type="text" value="{{system.fourthclass}}" placeholder="fourth Class"/>    
+        {{!-- Origin and Money --}}
+    <input name="system.origin" type="text" value="{{system.origin}}" placeholder="Origin"/>         
+    <input name="system.credits" type="text" value="{{system.credits}}" placeholder="$ Credits"/>      
 
-      {{!-- Owned Items Tab --}}
-      <div class="tab items" data-group="primary" data-tab="items">
-        {{> "systems/pokemonta3/templates/actor/parts/actor-items.hbs"}}
-      </div>
 
-      {{!-- Owned Spells Tab --}}
-      <div class="tab spells" data-group="primary" data-tab="spells">
-        {{> "systems/pokemonta3/templates/actor/parts/actor-spells.hbs"}}
-      </div>
 
-      {{!-- Active Effects Tab --}}
-      <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-        {{> "systems/pokemonta3/templates/actor/parts/actor-effects.hbs"}}
-      </div>
 
-    </section>
+
+
+
+
+
+
   </div>
 
-
-  <div class="sidebar">
-      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-      <h2 class="fontName"> {{!-- Character Name --}}
-      <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
-      </h2>
-      <label for="system.health.value" class="resource-label">Health</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
-        <span> / </span>
-        <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
-      </div>
-      <label for="system.honor.value" class="resource-label">Honor</label>
-      <input type="text" name="system.honor.value" value="{{system.honor.value}}" data-dtype="Number"/>
-      <label for="system.attributes.level.value" class="resource-label">Level</label>
-      <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
-  </div>
 
 
 

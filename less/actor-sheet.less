@@ -1,27 +1,88 @@
+.aceback {background: @ace-color !important}
+.aceClsfont {color: @ace-color !important; text-shadow: 1px 1px @font-shadow-light; }
+.brdback  {background: @brd-color !important}
+.brdClsfont {color: @brd-color !important; text-shadow: 1px 1px @font-shadow-light; }
+.crdback  {background: @crd-color !important}
+.crdClsfont {color: @crd-color !important; text-shadow: 1px 1px @font-shadow-light; }
+.rngback  {background: @rng-color !important}
+.rngClsfont {color: @rng-color !important; text-shadow: 1px 1px @font-shadow-light; }
+.rshback  {background:@rsh-color !important}
+.rshClsfont {color:@rsh-color !important; text-shadow: 1px 1px @font-shadow-light; }
+.marback  {background: @mar-color !important}
+.marClsfont {color: @mar-color !important; text-shadow: 1px 1px @font-shadow-light; }
+.psyback  {background: @psy-color !important}
+.psyClsfont {color: @psy-color !important; text-shadow: 1px 1px @font-shadow-light; }
+.pokback  {background: @pok-color}
+.pokClsfont {color: @pok-color !important; text-shadow: 1px 1px @font-shadow-light; }
+
 .gridcontainer {
     display: grid;
-    grid-template-columns: 400px 175px;
+    grid-template-columns: 410px 180px;
+    
 }
-.sidebar {
+
+.PCsheet, select {
+    border: 0px;
+}
+
+.PCsheet {
+    font-size: 12px;
+    text-align: center;
+    border: 2px solid @border-color;
+    border-radius: 10px;
+    padding: 3px;
     display: flex;
     flex-direction: column;
-    font-size: medium;
-
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    max-width: 170px;
+    text-align: center;
 }
 
-.mainbar {
+ input[type="text"], .primaryclass, [id$="font"] {
+    font-size: 12px;
+    text-align: center;
+    border: 2px solid @border-color;
+    border-radius: 10px;
+    padding: 3px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    max-width: 170px;
+    text-align: center;
 }
 
-.fontNav {
-    font-size: smaller;
+
+
+.statbox {
+    font-size: 10px;
+    text-align: center;
+    border: 2px solid @border-color;
+    border-radius: 10px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    max-width: 170px;
+    background-color: @background-color4;
 }
 
-.fontName {
-    font-size: 14px;
+.stats {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 2px;
+    text-align: center;
+    align-items: center;
 }
 
-.resource-content {
-    font-size: smaller;
-}
+#rollable:hover, #rollable:focus {
+    color: #000;
+    text-shadow: 0 0 10px red;
+    cursor: pointer;
+  }
+  

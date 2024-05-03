@@ -6,11 +6,31 @@
   font-family: pokemonClassic;
   src: url("fonts/Pokemon Classic.ttf");
 }
-.window-app .window-content {
+.window-content {
   font-family: pokemonClassic, pokemonXandY;
   font-size: smaller;
 }
 /* Global styles */
+.lighttrimmedfont {
+  color: #f8f8f8;
+  background-color: #3a4249;
+  text-shadow: 1px 1px #686868;
+}
+#lightinput {
+  color: #f8f8f8;
+  background-color: #3a4249;
+  text-shadow: 1px 1px #686868;
+}
+.darktrimmedfont {
+  color: #000000;
+  background-color: #e0e8e8;
+  text-shadow: 1px 1px #686868;
+}
+#darkinput {
+  color: #000000;
+  background-color: #e0e8e8;
+  text-shadow: 1px 1px #686868;
+}
 .shoot form {
   display: flex;
   flex-direction: column;
@@ -23,25 +43,122 @@
 .shoot .editor {
   height: 100%;
 }
+.aceback {
+  background: #e44649 !important;
+}
+.aceClsfont {
+  color: #e44649 !important;
+  text-shadow: 1px 1px #686868;
+}
+.brdback {
+  background: #90c655 !important;
+}
+.brdClsfont {
+  color: #90c655 !important;
+  text-shadow: 1px 1px #686868;
+}
+.crdback {
+  background: #5994ca !important;
+}
+.crdClsfont {
+  color: #5994ca !important;
+  text-shadow: 1px 1px #686868;
+}
+.rngback {
+  background: #eeb711 !important;
+}
+.rngClsfont {
+  color: #eeb711 !important;
+  text-shadow: 1px 1px #686868;
+}
+.rshback {
+  background: #bd57e0 !important;
+}
+.rshClsfont {
+  color: #bd57e0 !important;
+  text-shadow: 1px 1px #686868;
+}
+.marback {
+  background: #ac6231 !important;
+}
+.marClsfont {
+  color: #ac6231 !important;
+  text-shadow: 1px 1px #686868;
+}
+.psyback {
+  background: #ee96ee !important;
+}
+.psyClsfont {
+  color: #ee96ee !important;
+  text-shadow: 1px 1px #686868;
+}
+.pokback {
+  background: #111111;
+}
+.pokClsfont {
+  color: #111111 !important;
+  text-shadow: 1px 1px #686868;
+}
 .gridcontainer {
   display: grid;
-  grid-template-columns: 400px 175px;
+  grid-template-columns: 410px 180px;
 }
-.sidebar {
+.PCsheet,
+select {
+  border: 0px;
+}
+.PCsheet {
+  font-size: 12px;
+  border: 2px solid #404040;
+  border-radius: 10px;
+  padding: 3px;
   display: flex;
   flex-direction: column;
-  font-size: medium;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  max-width: 170px;
+  text-align: center;
 }
-.mainbar {
+input[type="text"],
+.primaryclass,
+[id$="font"] {
+  font-size: 12px;
+  border: 2px solid #404040;
+  border-radius: 10px;
+  padding: 3px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  max-width: 170px;
+  text-align: center;
 }
-.fontNav {
-  font-size: smaller;
+.statbox {
+  font-size: 10px;
+  text-align: center;
+  border: 2px solid #404040;
+  border-radius: 10px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  max-width: 170px;
+  background-color: #c8d0d8;
 }
-.fontName {
-  font-size: 14px;
+.stats {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin: 2px;
+  text-align: center;
+  align-items: center;
 }
-.resource-content {
-  font-size: smaller;
+#rollable:hover,
+#rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
 }
