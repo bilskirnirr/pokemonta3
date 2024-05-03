@@ -7,7 +7,8 @@
   src: url("fonts/Pokemon Classic.ttf");
 }
 .window-app .window-content {
-  font-family: pokemonXandY, pokemonClassic !important;
+  font-family: pokemonClassic, pokemonXandY;
+  font-size: smaller;
 }
 /* Global styles */
 .shoot form {
@@ -22,8 +23,25 @@
 .shoot .editor {
   height: 100%;
 }
-.pokemonta3.sheet.trainer {
-  background-color: #e0e8e8;
-  color: #5090e0;
-  font-family: "pokemonXandY";
+.gridcontainer {
+  display: grid;
+  grid-template-columns: 400px 175px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+.mainbar {
+  display: flex;
+  flex-direction: column;
+}
+.fontNav {
+  font-size: smaller;
+}
+.fontName {
+  font-size: 14px;
+}
+.resource-content {
+  font-size: smaller;
 }
