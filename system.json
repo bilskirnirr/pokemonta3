@@ -26,7 +26,7 @@
     "verified": "11.315"
   },
   "esmodules": ["module/pokemonta3.mjs"],
-  "styles": ["css/pokemonta3.css"],
+  "styles": ["pokemonta3.css"],
   "languages": [
     {
       "lang": "en",
