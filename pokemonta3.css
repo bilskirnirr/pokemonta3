@@ -11,7 +11,7 @@
   font-size: smaller;
 }
 /* Global styles */
-.lighttrimmedfont {
+.lighttrimmedfont.lighttrimmedfont {
   color: #f8f8f8;
   background-color: #3a4249;
   text-shadow: 1px 1px #686868;
@@ -21,7 +21,7 @@
   background-color: #3a4249;
   text-shadow: 1px 1px #686868;
 }
-.darktrimmedfont {
+.darktrimmedfont.darktrimmedfont {
   color: #000000;
   background-color: #e0e8e8;
   text-shadow: 1px 1px #686868;
@@ -43,72 +43,79 @@
 .shoot .editor {
   height: 100%;
 }
-.aceback {
-  background: #e44649 !important;
+.aceback.aceback {
+  background: #e44649;
 }
-.aceClsfont {
-  color: #e44649 !important;
+.aceClsfont.aceClsfont {
+  color: #e44649;
   text-shadow: 1px 1px #686868;
 }
-.brdback {
-  background: #90c655 !important;
+.brdback.brdback {
+  background: #90c655;
 }
-.brdClsfont {
-  color: #90c655 !important;
+.brdClsfont.brdClsfont {
+  color: #90c655;
   text-shadow: 1px 1px #686868;
 }
-.crdback {
-  background: #5994ca !important;
+.crdback.crdback {
+  background: #5994ca;
 }
-.crdClsfont {
-  color: #5994ca !important;
+.crdClsfon.crdClsfont {
+  color: #5994ca;
   text-shadow: 1px 1px #686868;
 }
-.rngback {
-  background: #eeb711 !important;
+.rngback.rngback {
+  background: #eeb711;
 }
-.rngClsfont {
-  color: #eeb711 !important;
+.rngClsfont.rngClsfont {
+  color: #eeb711;
   text-shadow: 1px 1px #686868;
 }
-.rshback {
-  background: #bd57e0 !important;
+.rshback.rshback {
+  background: #bd57e0;
 }
-.rshClsfont {
-  color: #bd57e0 !important;
+.rshClsfont.rshClsfont {
+  color: #bd57e0;
   text-shadow: 1px 1px #686868;
 }
-.marback {
-  background: #ac6231 !important;
+.marback.marback {
+  background: #ac6231;
 }
-.marClsfont {
-  color: #ac6231 !important;
+.marClsfont.marClsfont {
+  color: #ac6231;
   text-shadow: 1px 1px #686868;
 }
-.psyback {
-  background: #ee96ee !important;
+.psyback.psyback {
+  background: #ee96ee;
 }
-.psyClsfont {
-  color: #ee96ee !important;
+.psyClsfont.psyClsfont {
+  color: #ee96ee;
   text-shadow: 1px 1px #686868;
 }
-.pokback {
+.pokback.pokback {
   background: #111111;
 }
-.pokClsfont {
-  color: #111111 !important;
+.pokClsfont.pokClsfont {
+  color: #111111;
   text-shadow: 1px 1px #686868;
 }
 .gridcontainer {
   display: grid;
-  grid-template-columns: 410px 180px;
+  grid-template-columns: 420px 200px;
+}
+.pokemonta3.sheet.actor {
+  width: 610px !important;
+  height: 700px !important;
 }
 .PCsheet,
 select {
   border: 0px;
 }
-.PCsheet {
-  font-size: 12px;
+.Noboarder.Noboarder {
+  border: 0px;
+}
+.statbox,
+.PCsheet.PCsheet {
   border: 2px solid #404040;
   border-radius: 10px;
   padding: 3px;
@@ -120,34 +127,15 @@ select {
   max-width: 170px;
   text-align: center;
 }
-input[type="text"],
-.primaryclass,
-[id$="font"] {
+.PCsheet.PCsheet {
   font-size: 12px;
-  border: 2px solid #404040;
-  border-radius: 10px;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2px;
-  max-width: 170px;
-  text-align: center;
 }
 .statbox {
   font-size: 10px;
-  text-align: center;
-  border: 2px solid #404040;
-  border-radius: 10px;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2px;
-  max-width: 170px;
   background-color: #c8d0d8;
+}
+.origincredit.origincredit {
+  background-color: #e0e8e8;
 }
 .stats {
   display: grid;
@@ -161,4 +149,11 @@ input[type="text"],
   color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;
+}
+.navigationselection {
+  padding: 5px;
+  border: 2px solid #404040;
+  border-top: 2px solid #404040 !important;
+  border-bottom: 2px solid #404040 !important;
+  border-radius: 10px;
 }

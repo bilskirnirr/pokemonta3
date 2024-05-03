@@ -1,20 +1,31 @@
-<form class="{{cssClass}} {{actor.type}}  " autocomplete="off">
+<form class="{{cssClass}} {{actor.type}}  gridcontainer" autocomplete="off">
+  <div>
+    <nav class="{{system.primaryclass}}back navigationselection sheet-tabs tabs" data-group="primary">
+      {{!-- Default tab is specified in actor-sheet.mjs --}}
+      <a class="darkinput" id="rollable" data-tab="features">Features</a>/
+      <a class="darkinput" id="rollable" data-tab="skills">Description</a>/
+      <a class="darkinput" id="rollable" data-tab="items">Items</a>/
+      <a class="darkinput" id="rollable" data-tab="pokemon">Pokemon</a>
+    </nav>
+  </div>
+
   <div class="sidebar"> {{!-- Side Bar--}}
 
     <h1 class="{{system.primaryclass}}back PCsheet">  {{!-- Primary Class Selector --}}
       <select class="{{system.primaryclass}}back" name="system.primaryclass">
         {{selectOptions optionObj selected=system.primaryclass localize=true}}
       </select>
+      <input class="Noboarder {{system.primaryclass}}back" name="system.attributes.level.value" type="number" value="{{system.attributes.level.value}}" placeholder="1"/>  
     </h1>
 
     {{!-- Trainer image --}}
     <img class="{{system.primaryclass}}back PCsheet" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="170"/>  
 
     {{!-- Trainer Name --}}
-    <input class="PCsheet" id="darkinput" name="name" type="text" value="{{actor.name}}" placeholder="Trainer Name"/>
+    <input class="PCsheet lighttrimmedfont" name="name" type="text" value="{{actor.name}}" placeholder="Trainer Name"/>
 
     {{!-- Trainer Stats --}}
-    <div class="statbox" id="{{system.primaryclass}}font" >
+    <div class="statbox {{system.primaryclass}}Clsfont">
       {{#each system.stats as |stat key|}}
       <div class="stats">
         <label class="statname rollable" id="rollable" for="system.stats.{{key}}.value"  data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
@@ -25,12 +36,12 @@
     </div>
 
         {{!-- Other Classes --}}
-    <input name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder="Second Class"/>
-    <input name="system.thirdclass" type="text" value="{{system.thirdclass}}" placeholder="Third Class"/>
-    <input name="system.fourthclass" type="text" value="{{system.fourthclass}}" placeholder="fourth Class"/>    
+    <input class="PCsheet {{system.primaryclass}}back" name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder="Second Class"/>
+    <input class="PCsheet {{system.primaryclass}}back" name="system.thirdclass" type="text" value="{{system.thirdclass}}" placeholder="Third Class"/>
+    <input class="PCsheet {{system.primaryclass}}back" name="system.fourthclass" type="text" value="{{system.fourthclass}}" placeholder="fourth Class"/>    
         {{!-- Origin and Money --}}
-    <input name="system.origin" type="text" value="{{system.origin}}" placeholder="Origin"/>         
-    <input name="system.credits" type="text" value="{{system.credits}}" placeholder="$ Credits"/>      
+    <input class="PCsheet {{system.primaryclass}}Clsfont origincredit" name="system.origin" type="text" value="{{system.origin}}" placeholder="Origin"/>         
+    <input class="PCsheet {{system.primaryclass}}Clsfont origincredit" name="system.credits" type="text" value="{{system.credits}}" placeholder="$ Credits"/>      
 
 
 
