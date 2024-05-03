@@ -92,7 +92,7 @@ export class Pokemonta3Actor extends Actor {
     // Prepare trainer roll data.
     this._getTrainerRollData(data);
     this._getNpcRollData(data);
-    this._getPokemonRollData(data);
+   // this._getPokemonRollData(data); <<<<<<<<<<< Somehow this fucking breaks the sheets???
 
     return data;
   }
