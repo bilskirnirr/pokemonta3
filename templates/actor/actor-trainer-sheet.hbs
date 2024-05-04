@@ -1,12 +1,55 @@
-<form class="{{cssClass}} {{actor.type}}  gridcontainer" autocomplete="off">
+<form class="{{cssClass}} {{actor.type}}  {{system.primaryclass}}backround gridcontainer" autocomplete="off">
   <div>
-    <nav class="{{system.primaryclass}}back navigationselection sheet-tabs tabs" data-group="primary">
-      {{!-- Default tab is specified in actor-sheet.mjs --}}
-      <a class="darkinput" id="rollable" data-tab="features">Features</a>/
-      <a class="darkinput" id="rollable" data-tab="skills">Description</a>/
-      <a class="darkinput" id="rollable" data-tab="items">Items</a>/
-      <a class="darkinput" id="rollable" data-tab="pokemon">Pokemon</a>
-    </nav>
+     {{!-- <nav class="{{system.primaryclass}}back navigationselection sheet-tabs tabs" data-group="primary">
+         Default tab is specified in actor-sheet.mjs 
+        <a class="darkinput" id="rollable" data-tab="features">Features</a>/
+        <a class="darkinput" id="rollable" data-tab="skills">Description</a>/
+        <a class="darkinput" id="rollable" data-tab="items">Items</a>/
+        <a class="darkinput" id="rollable" data-tab="pokemon">Pokemon</a>
+      </nav> --}}
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="{{system.primaryclass}}back navigationselection sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="darkinput" data-tab="features">Features</a> /
+    <a class="darkinput" data-tab="description">Description</a> /
+    <a class="darkinput" data-tab="items">Items</a> /
+    <a class="darkinput" data-tab="effects">Effects</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Owned Features Tab --}}
+    <div class="tab features" data-group="primary" data-tab="features">
+      <section class="grid grid-3col">
+
+        Features
+
+      </section>
+    </div>
+
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="description">
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Owned Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+       {{> "systems/pokemonta3/templates/actor/parts/actor-items.hbs"}}
+    </div>
+
+    {{!-- Owned Spells Tab --}}
+    <div class="tab spells" data-group="primary" data-tab="spells">
+      {{> "systems/pokemonta3/templates/actor/parts/actor-spells.hbs"}}
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/pokemonta3/templates/actor/parts/actor-effects.hbs"}}
+    </div>
+
   </div>
 
   <div class="sidebar"> {{!-- Side Bar--}}
@@ -15,7 +58,10 @@
       <select class="{{system.primaryclass}}back" name="system.primaryclass">
         {{selectOptions optionObj selected=system.primaryclass localize=true}}
       </select>
+      <div class="gridrow">
+        Level
       <input class="Noboarder {{system.primaryclass}}back" name="system.attributes.level.value" type="number" value="{{system.attributes.level.value}}" placeholder="1"/>  
+      </div>
     </h1>
 
     {{!-- Trainer image --}}

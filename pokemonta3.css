@@ -50,12 +50,18 @@
   color: #e44649;
   text-shadow: 1px 1px #686868;
 }
+.acebackround {
+  background-image: url("assets/PokemonSheets/CharBackground-ace.png");
+}
 .brdback.brdback {
   background: #90c655;
 }
 .brdClsfont.brdClsfont {
   color: #90c655;
   text-shadow: 1px 1px #686868;
+}
+.brdbackround {
+  background-image: url("assets/PokemonSheets/CharBackground-brd.png");
 }
 .crdback.crdback {
   background: #5994ca;
@@ -64,12 +70,18 @@
   color: #5994ca;
   text-shadow: 1px 1px #686868;
 }
+.crdbackround {
+  background-image: url("assets/PokemonSheets/CharBackground-crd.png");
+}
 .rngback.rngback {
   background: #eeb711;
 }
 .rngClsfont.rngClsfont {
   color: #eeb711;
   text-shadow: 1px 1px #686868;
+}
+.rngbackround {
+  background-image: url("assets/PokemonSheets/CharBackground-rng.png");
 }
 .rshback.rshback {
   background: #bd57e0;
@@ -78,12 +90,18 @@
   color: #bd57e0;
   text-shadow: 1px 1px #686868;
 }
+.rshbackround {
+  background-image: url("assets/PokemonSheets/CharBackground-rsh.png");
+}
 .marback.marback {
   background: #ac6231;
 }
 .marClsfont.marClsfont {
   color: #ac6231;
   text-shadow: 1px 1px #686868;
+}
+.marbackround {
+  background-image: url("assets/PokemonSheets/CharBackground-mar.png");
 }
 .psyback.psyback {
   background: #ee96ee;
@@ -92,6 +110,9 @@
   color: #ee96ee;
   text-shadow: 1px 1px #686868;
 }
+.psybackround {
+  background-image: url("assets/PokemonSheets/CharBackground-psy.png");
+}
 .pokback.pokback {
   background: #111111;
 }
@@ -99,13 +120,31 @@
   color: #111111;
   text-shadow: 1px 1px #686868;
 }
+.pokbackround {
+  background-image: url("assets/PokemonSheets/CharBackground-pok.png");
+}
+.window-content.window-content {
+  background-color: #e0e8e8;
+  background-image: none;
+}
 .gridcontainer {
   display: grid;
   grid-template-columns: 420px 200px;
+  background-color: #e0e8e8;
+}
+.gridrow {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: baseline;
+  text-align: center;
 }
 .pokemonta3.sheet.actor {
   width: 610px !important;
-  height: 700px !important;
+  min-height: 700px !important;
+}
+div.editor-content {
+  min-width: 410px;
+  min-height: 410px;
 }
 .PCsheet,
 select {

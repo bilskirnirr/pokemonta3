@@ -1,29 +1,54 @@
 .aceback.aceback {background: @ace-color}
 .aceClsfont.aceClsfont {color: @ace-color; text-shadow: 1px 1px @font-shadow-light; }
+.acebackround {background-image:  url("assets/PokemonSheets/CharBackground-ace.png")}
 .brdback.brdback  {background: @brd-color}
 .brdClsfont.brdClsfont {color: @brd-color; text-shadow: 1px 1px @font-shadow-light; }
+.brdbackround {background-image:  url("assets/PokemonSheets/CharBackground-brd.png")}
 .crdback.crdback  {background: @crd-color}
 .crdClsfon.crdClsfont {color: @crd-color; text-shadow: 1px 1px @font-shadow-light; }
+.crdbackround {background-image:  url("assets/PokemonSheets/CharBackground-crd.png")}
 .rngback.rngback {background: @rng-color}
 .rngClsfont.rngClsfont {color: @rng-color; text-shadow: 1px 1px @font-shadow-light; }
+.rngbackround {background-image:  url("assets/PokemonSheets/CharBackground-rng.png")}
 .rshback.rshback  {background:@rsh-color}
 .rshClsfont.rshClsfont {color:@rsh-color; text-shadow: 1px 1px @font-shadow-light; }
+.rshbackround {background-image:  url("assets/PokemonSheets/CharBackground-rsh.png")}
 .marback.marback  {background: @mar-color}
 .marClsfont.marClsfont {color: @mar-color; text-shadow: 1px 1px @font-shadow-light; }
+.marbackround {background-image:  url("assets/PokemonSheets/CharBackground-mar.png")}
 .psyback.psyback  {background: @psy-color}
 .psyClsfont.psyClsfont {color: @psy-color; text-shadow: 1px 1px @font-shadow-light; }
+.psybackround {background-image:  url("assets/PokemonSheets/CharBackground-psy.png")}
 .pokback.pokback  {background: @pok-color}
 .pokClsfont.pokClsfont {color: @pok-color; text-shadow: 1px 1px @font-shadow-light; }
+.pokbackround {background-image:  url("assets/PokemonSheets/CharBackground-pok.png")}
+
+.window-content.window-content {
+    background-color: @background-color2;
+    background-image: none;
+}
 
 .gridcontainer {
     display: grid;
     grid-template-columns: 420px 200px;
-    
+    background-color: @background-color2;
+}
+.gridrow {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    align-items:baseline;
+    text-align: center;
+
 }
 
 .pokemonta3.sheet.actor {
     width: 610px !important;
-    height: 700px !important;
+    min-height: 700px !important;
+}
+
+div.editor-content {
+    min-width: 410px;
+    min-height: 410px;
 }
 
 .PCsheet, select {
