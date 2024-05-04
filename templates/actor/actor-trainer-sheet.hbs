@@ -25,6 +25,31 @@
       <section class="grid grid-3col">
 
         Features
+    {{!-- Trainer Skills --}}
+    <div class="skillbox {{system.primaryclass}}Clsfont">
+      {{#each system.skills as |skill key|}}
+      <div class="skill flexrow flex-group-center">
+        <label for="system.skills.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@skills.{{key}}.value" data-label="{{skill.label}}">{{skill.label}}</label>
+        <input type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
+      </div>
+      {{/each}}
+      
+      
+      
+      {{!-- 
+      {{#each system.skills as |skill key|}}
+      <div class="stats">
+        <label class="statname rollable" id="rollable" for="system.skills.{{key}}.value"  data-roll="d20+@skills.{{key}}.mod" data-label="{{skill.label}}">{{skill.label}}</label>
+        <input class="statinput" type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
+      </div>
+      {{/each}}
+      --}}
+    </div>
+
+
+
+
+
 
       </section>
     </div>

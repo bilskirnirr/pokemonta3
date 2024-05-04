@@ -29,6 +29,46 @@ pokemonta3.PCClass = {
   mar: 'pokemonta3.PCClass.mar',
   psy: 'pokemonta3.PCClass.psy',
   pok: 'pokemonta3.PCClass.pok'
-}
+};
  
+pokemonta3.skills = {
+  acro: 'pokemonta3.Skills.acro',
+  athl: 'pokemonta3.Skills.athl',
+  bluf: 'pokemonta3.Skills.bluf',
+  conc: 'pokemonta3.Skills.conc',
+  cons: 'pokemonta3.Skills.cons',
+  dipl: 'pokemonta3.Skills.dipl',
+  engi: 'pokemonta3.Skills.engi',
+  hist: 'pokemonta3.Skills.hist',
+  insi: 'pokemonta3.Skills.insi',
+  inve: 'pokemonta3.Skills.inve',
+  medi: 'pokemonta3.Skills.medi',
+  natu: 'pokemonta3.Skills.natu',
+  perc: 'pokemonta3.Skills.perc',
+  perf: 'pokemonta3.Skills.perf',
+  pokh: 'pokemonta3.Skills.pokh',
+  prog: 'pokemonta3.Skills.prog',
+  sloh: 'pokemonta3.Skills.sloh',
+  stea: 'pokemonta3.Skills.stea',
+};
 
+pokemonta3.skillAbbreviations = {
+  acro: 'pokemonta3.Skills.acro',
+  athl: 'pokemonta3.Skills.athl',
+  bluf: 'pokemonta3.Skills.bluf',
+  conc: 'pokemonta3.Skills.conc',
+  cons: 'pokemonta3.Skills.cons',
+  dipl: 'pokemonta3.Skills.dipl',
+  engi: 'pokemonta3.Skills.engi',
+  hist: 'pokemonta3.Skills.hist',
+  insi: 'pokemonta3.Skills.insi',
+  inve: 'pokemonta3.Skills.inve',
+  medi: 'pokemonta3.Skills.medi',
+  natu: 'pokemonta3.Skills.natu',
+  perc: 'pokemonta3.Skills.perc',
+  perf: 'pokemonta3.Skills.perf',
+  pokh: 'pokemonta3.Skills.pokh',
+  prog: 'pokemonta3.Skills.prog',
+  sloh: 'pokemonta3.Skills.sloh',
+  stea: 'pokemonta3.Skills.stea',
+};

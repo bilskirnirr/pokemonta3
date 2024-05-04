@@ -53,6 +53,7 @@ export class Pokemonta3Actor extends Actor {
       // Calculate the modifier using d20 rules.
       stat.mod = Math.floor((stat.value) / 2);
     }
+
   }
 
     /**

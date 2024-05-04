@@ -32,7 +32,7 @@
       }
     },
     "trainer": {
-      "templates": ["base"],
+      "templates": ["base","skillsTemp"],
       "primaryclass": "",
       "secondaryclass": "",
       "thirdclass": "",
@@ -60,6 +60,26 @@
         "spd": {
           "value": 1
         }
+      },
+      "skills": {
+        "acro": {"value": 0},
+        "athl": {"value": 0},
+        "bluf": {"value": 0},
+        "conc": {"value": 0},
+        "cons": {"value": 0},
+        "dipl": {"value": 0},
+        "engi": {"value": 0},
+        "hist": {"value": 0},
+        "insi": {"value": 0},
+        "inve": {"value": 0},
+        "medi": {"value": 0},
+        "natu": {"value": 0},
+        "perc": {"value": 0},
+        "perf": {"value": 0},
+        "pokh": {"value": 0},
+        "prog": {"value": 0},
+        "sloh": {"value": 0},
+        "stea": {"value": 0}
       }
     },
     "npc": {

@@ -113,8 +113,10 @@
 .psybackround {
   background-image: url("assets/PokemonSheets/CharBackground-psy.png");
 }
-.pokback.pokback {
+.pokback.pokback.pokback {
   background: #111111;
+  color: #f8f8f8;
+  text-shadow: 1px 1px #686868;
 }
 .pokClsfont.pokClsfont {
   color: #111111;

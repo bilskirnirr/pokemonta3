@@ -91,6 +91,12 @@ export class Pokemonta3ActorSheet extends ActorSheet {
     for (let [k, v] of Object.entries(context.system.stats)) {
       v.label = game.i18n.localize(CONFIG.pokemonta3.stats[k]) ?? k;
     }
+
+    // Handle skill scores.
+    for (let [k, v] of Object.entries(context.system.skills)) {
+      v.label = game.i18n.localize(CONFIG.pokemonta3.skills[k]) ?? k;
+    }
+ 
   }
 
   _preparePokemonData(context) {
@@ -248,7 +254,7 @@ export class Pokemonta3ActorSheet extends ActorSheet {
       }
     }
 
-    // Handle rolls that supply the formula directly.
+    // Handle rolls that supply the formula directly. Stat
     if (dataset.roll) {
       let label = dataset.label ? `[stat] ${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());
@@ -259,5 +265,20 @@ export class Pokemonta3ActorSheet extends ActorSheet {
       });
       return roll;
     }
+
+    // Handle rolls that supply the formula directly. Skills
+    if (dataset.roll) {
+      let label = dataset.label ? `[skill] ${dataset.label}` : '';
+      let roll = new Roll(dataset.roll, this.actor.getRollData());
+      roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: label,
+        rollMode: game.settings.get('core', 'rollMode'),
+      });
+      return roll;
+    }
+
+
+
   }
 }
