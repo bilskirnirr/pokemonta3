@@ -1,5 +1,5 @@
-<ol class='items-list'>
-  <li class='item flexrow items-header'>
+<ol class='items-list darktrimmedfont'>
+  <li class='item gridrow4 items-header'>
     <div class='item-name'>{{localize 'Name'}}</div>
     <div class='item-formula'>{{localize 'Roll Formula'}}</div>
     <div class='item-controls'>
@@ -13,12 +13,14 @@
       </a>
     </div>
   </li>
+  <hr class="rounded">
   {{#each gear as |item id|}}
-    <li class='item flexrow' data-item-id='{{item._id}}'>
-      <div class='item-name'>
+    <li class='item gridrow4' data-item-id='{{item._id}}'>
+      <div class='item-name gridrow3'>
         <div class='item-image'>
           <a class='rollable' data-roll-type='item'>
             <img
+              class="lighttrimmedfont"
               src='{{item.img}}'
               title='{{item.name}}'
               width='24'
@@ -26,7 +28,7 @@
             />
           </a>
         </div>
-        <h4>{{item.name}}</h4>
+        <h4 class='rollable' data-roll-type='item' id="rollable">{{item.name}}</h4>
       </div>
       <div class='item-formula item-prop'>{{item.system.formula}}</div>
       <div class='item-controls'>

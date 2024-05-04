@@ -14,7 +14,7 @@
     <a class="darkinput" data-tab="features">Features</a> /
     <a class="darkinput" data-tab="description">Description</a> /
     <a class="darkinput" data-tab="items">Items</a> /
-    <a class="darkinput" data-tab="effects">Effects</a>
+    <a class="darkinput" data-tab="partnermon">Pokemon</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -22,31 +22,31 @@
 
     {{!-- Owned Features Tab --}}
     <div class="tab features" data-group="primary" data-tab="features">
-      <section class="grid grid-3col">
+      <section class="features grid grid-2col">
 
-        Features
+        
     {{!-- Trainer Skills --}}
     <div class="skillbox {{system.primaryclass}}Clsfont">
+      <p class="darktrimmedfont skillfeaturetitle"> Skills</p>
       {{#each system.skills as |skill key|}}
-      <div class="skill flexrow flex-group-center">
-        <label for="system.skills.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@skills.{{key}}.value" data-label="{{skill.label}}">{{skill.label}}</label>
-        <input type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
-      </div>
-      {{/each}}
-      
-      
-      
-      {{!-- 
-      {{#each system.skills as |skill key|}}
-      <div class="stats">
-        <label class="statname rollable" id="rollable" for="system.skills.{{key}}.value"  data-roll="d20+@skills.{{key}}.mod" data-label="{{skill.label}}">{{skill.label}}</label>
+      <div class="skill">
         <input class="statinput" type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
+        <div class="checkboxes">
+          <input class="statinbox" type="checkbox" name="system.skills.{{key}}.skill1" value="{{skill.skill1}}" {{checked skill.skill1}} data-dtype="Boolean"/>
+          <input class="statinbox" type="checkbox" name="system.skills.{{key}}.skill2" value="{{skill.skill2}}" {{checked skill.skill2}} data-dtype="Boolean"/>
+        </div>
+        <label class="statname rollable" id="rollable" for="system.skills.{{key}}.value"  data-roll="d20+@skills.{{key}}.value" data-label="{{skill.label}}">{{skill.label}}</label>
       </div>
       {{/each}}
-      --}}
     </div>
 
+    <div> 
+      <p class="darktrimmedfont skillfeaturetitle"> Features</p>
+      {{> "systems/pokemonta3/templates/actor/parts/actor-features.hbs"}}
 
+
+
+    </div>
 
 
 
@@ -56,6 +56,7 @@
 
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
+      <p class="darktrimmedfont skillfeaturetitle"> Biography</p>
       {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
       {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
     </div>
@@ -71,7 +72,7 @@
     </div>
 
     {{!-- Active Effects Tab --}}
-    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+    <div class="tab partnermon flexcol" data-group="primary" data-tab="partnermon">
       {{> "systems/pokemonta3/templates/actor/parts/actor-effects.hbs"}}
     </div>
 
@@ -95,6 +96,13 @@
     {{!-- Trainer Name --}}
     <input class="PCsheet lighttrimmedfont" name="name" type="text" value="{{actor.name}}" placeholder="Trainer Name"/>
 
+    {{!-- Trainer HP --}}
+    <div class="PCsheet HPrimmedfont">
+      HP
+      <input class="HPrimmedfont" name="system.health.value" type="text" value="{{system.health.value}}"/>
+      /
+      <input class="HPrimmedfont" name="system.health.max" type="text" value="{{system.health.max}}"/>
+    </div>
     {{!-- Trainer Stats --}}
     <div class="statbox {{system.primaryclass}}Clsfont">
       {{#each system.stats as |stat key|}}

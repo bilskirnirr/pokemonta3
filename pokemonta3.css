@@ -31,6 +31,13 @@
   background-color: #e0e8e8;
   text-shadow: 1px 1px #686868;
 }
+.HPrimmedfont.HPrimmedfont.HPrimmedfont {
+  color: #f8f8f8;
+  background-color: #a32121;
+  text-shadow: 1px 1px #686868;
+  display: grid;
+  grid-template-columns: 17% 38% 7% 38%;
+}
 .shoot form {
   display: flex;
   flex-direction: column;
@@ -197,4 +204,65 @@ select {
   border-top: 2px solid #404040 !important;
   border-bottom: 2px solid #404040 !important;
   border-radius: 10px;
+}
+.skillbox {
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill {
+  font-size: 10px;
+  display: grid;
+  grid-template-columns: 25px 20px 165px;
+  text-align: center;
+  align-items: center;
+}
+.skillfeaturetitle {
+  width: 100%;
+  margin-top: 0px;
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.biography.tab {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 0px;
+}
+div.checkboxes {
+  display: grid;
+  grid-template-rows: 10px 10px;
+  align-items: first center;
+  width: 10px;
+}
+input.statinbox {
+  width: 10px;
+  height: 10px;
+  align-items: center;
+}
+ol {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+hr.rounded {
+  border-top: 2px solid #8898a8;
+  border-radius: 1px;
+  margin: 0px;
+}
+.gridrow1 {
+  display: grid;
+  grid-template-columns: 90%  10%;
+}
+.gridrow2 {
+  display: grid;
+  grid-template-columns: 10%  90%;
+}
+.gridrow3 {
+  display: grid;
+  grid-template-columns: 15%  85%;
+  align-items: center;
+  text-align: center;
+}
+.gridrow4 {
+  display: grid;
+  grid-template-columns: 35%  55% 10%;
 }
