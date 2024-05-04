@@ -1,12 +1,5 @@
 <form class="{{cssClass}} {{actor.type}}  {{system.primaryclass}}backround gridcontainer" autocomplete="off">
   <div>
-     {{!-- <nav class="{{system.primaryclass}}back navigationselection sheet-tabs tabs" data-group="primary">
-         Default tab is specified in actor-sheet.mjs 
-        <a class="darkinput" id="rollable" data-tab="features">Features</a>/
-        <a class="darkinput" id="rollable" data-tab="skills">Description</a>/
-        <a class="darkinput" id="rollable" data-tab="items">Items</a>/
-        <a class="darkinput" id="rollable" data-tab="pokemon">Pokemon</a>
-      </nav> --}}
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="{{system.primaryclass}}back navigationselection sheet-tabs tabs" data-group="primary">
@@ -55,7 +48,23 @@
     </div>
 
     {{!-- Biography Tab --}}
-    <div class="tab biography" data-group="primary" data-tab="description">
+    <div class="tab biography " data-group="primary" data-tab="description">
+      <div class="gridrow30">
+        <div class="PCsheet {{system.primaryclass}}back" id="honor"> Honor
+         <input  class="Noboarder {{system.primaryclass}}back" name="system.honor.value" type="text" value="{{system.honor.value}}" placeholder="Honor"/>
+        </div>
+
+        {{#if (eq system.primaryclass "pok")}}   {{!-- If playing pokemon this appears --}}
+          <select class="PCsheet typing {{system.primarytyping}}back" name="system.primarytyping">
+            {{selectOptions optionObjtype selected=system.primarytyping localize=true}}
+          </select>
+          <select class="PCsheet typing {{system.secondarytyping}}back" name="system.secondarytyping">
+            {{selectOptions optionObjtype selected=system.secondarytyping localize=true}}
+          </select>      
+        {{/if}}
+      </div>  
+
+
       <p class="darktrimmedfont skillfeaturetitle"> Biography</p>
       {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
       {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
@@ -66,14 +75,12 @@
        {{> "systems/pokemonta3/templates/actor/parts/actor-items.hbs"}}
     </div>
 
-    {{!-- Owned Spells Tab --}}
-    <div class="tab spells" data-group="primary" data-tab="spells">
-      {{> "systems/pokemonta3/templates/actor/parts/actor-spells.hbs"}}
-    </div>
-
-    {{!-- Active Effects Tab --}}
+    {{!-- Active Pokemon partnermon Tab --}}
     <div class="tab partnermon flexcol" data-group="primary" data-tab="partnermon">
-      {{> "systems/pokemonta3/templates/actor/parts/actor-effects.hbs"}}
+      <p class="darktrimmedfont skillfeaturetitle"> Pokemon With Trainer</p>
+      {{> "systems/pokemonta3/templates/actor/parts/actor-partnermon.hbs"}}
+      <p class="darktrimmedfont skillfeaturetitle"> PC Box</p>
+      {{editor system.PCbox target="system.PCbox" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
   </div>

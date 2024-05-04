@@ -9,7 +9,7 @@
 }
 
 
-.window-content {
+form.trainer {
     font-family: pokemonClassic, pokemonXandY;
     font-size: smaller;
 }
@@ -27,8 +27,12 @@
 @font-shadow-light: #686868;
 @font-shadow-dark: #000000;
 @border-color: #404040;
+@poke-background: #10a840;
+@poke-outline: #68d870;
+@poke-border: #004800;
 
 //Typing Colors
+@non-color: #3a4249;
 @bug-color: #abba38;
 @dar-color: #745949;
 @dra-color: #703cf1;
@@ -68,7 +72,7 @@
 }
 #lightinput {
     color: @font-color-light;
-    background-color: @background-color3;
+    background-color: none;
     text-shadow: 1px 1px @font-shadow-light;
 }
 .darktrimmedfont.darktrimmedfont {
@@ -89,3 +93,43 @@
     display: grid;
     grid-template-columns: 17% 38% 7% 38%;
 }
+
+.nonback.nonback {background: @non-color}
+.norback.norback {background: @nor-color}
+.firback.firback {background: @fir-color}
+.watback.watback {background: @wat-color}
+.eleback.eleback {background: @ele-color}
+.graback.graback {background: @gra-color}
+.iceback.iceback {background: @ice-color}
+.figback.figback {background: @fig-color}
+.poiback.poiback {background: @poi-color}
+.groback.groback {background: @gro-color}
+.flyback.flyback {background: @fly-color}
+.psyback.psyback {background: @psy-color}
+.bugback.bugback {background: @bug-color}
+.rocback.rocback {background: @roc-color}
+.ghoback.ghoback {background: @gho-color}
+.draback.draback {background: @dra-color}
+.darback.darback {background: @dar-color}
+.steback.steback {background: @ste-color}
+.faiback.faiback {background: @fai-color}
+
+.nonClsfont.nonClsfont {color: @non-color; text-shadow: 1px 1px @font-shadow-light; }
+.norClsfont.norClsfont {color: @nor-color; text-shadow: 1px 1px @font-shadow-light; }
+.firClsfont.firClsfont {color: @fir-color; text-shadow: 1px 1px @font-shadow-light; }
+.watClsfont.watClsfont {color: @wat-color; text-shadow: 1px 1px @font-shadow-light; }
+.eleClsfont.eleClsfont {color: @ele-color; text-shadow: 1px 1px @font-shadow-light; }
+.graClsfont.graClsfont {color: @gra-color; text-shadow: 1px 1px @font-shadow-light; }
+.iceClsfont.iceClsfont {color: @ice-color; text-shadow: 1px 1px @font-shadow-light; }
+.figClsfont.figClsfont {color: @fig-color; text-shadow: 1px 1px @font-shadow-light; }
+.poiClsfont.poiClsfont {color: @poi-color; text-shadow: 1px 1px @font-shadow-light; }
+.groClsfont.groClsfont {color: @gro-color; text-shadow: 1px 1px @font-shadow-light; }
+.flyClsfont.flyClsfont {color: @fly-color; text-shadow: 1px 1px @font-shadow-light; }
+.psyClsfont.psyClsfont {color: @psy-color; text-shadow: 1px 1px @font-shadow-light; }
+.bugClsfont.bugClsfont {color: @bug-color; text-shadow: 1px 1px @font-shadow-light; }
+.rocClsfont.rocClsfont {color: @roc-color; text-shadow: 1px 1px @font-shadow-light; }
+.ghoClsfont.ghoClsfont {color: @gho-color; text-shadow: 1px 1px @font-shadow-light; }
+.draClsfont.draClsfont {color: @dra-color; text-shadow: 1px 1px @font-shadow-light; }
+.darClsfont.darClsfont {color: @dar-color; text-shadow: 1px 1px @font-shadow-light; }
+.steClsfont.steClsfont {color: @ste-color; text-shadow: 1px 1px @font-shadow-light; }
+.faiClsfont.faiClsfont {color: @fai-color; text-shadow: 1px 1px @font-shadow-light; }

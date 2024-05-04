@@ -1,0 +1,14 @@
+<ol class='partnermons-list darktrimmedfont'>
+
+
+      {{#each system.partnermon as |partner key|}}
+
+      <div class="partnermon1">
+        <div class="pokeballimage"></div>
+        <input class="Noboarder partnerinput" id="lightinput" type="text" name="system.partnermon.{{key}}.value" value="{{partner.value}}" data-dtype="String"/>
+      </div>
+      {{/each}}
+
+
+
+</ol>

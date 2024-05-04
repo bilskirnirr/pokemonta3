@@ -18,6 +18,27 @@
       "psy":"Psychic",
       "pok":"Pokemon"
     },
+    "PokeType": {
+      "non":"None",
+      "nor":"Normal",
+      "fir":"Fire",
+      "wat":"Water",
+      "ele":"Electric",
+      "gra":"Grass",
+      "ice":"Ice",
+      "fig":"Fighting",
+      "poi":"Poison",
+      "gro":"Ground",
+      "fly":"Flying",
+      "psy":"Psychic",
+      "bug":"Bug",
+      "roc":"Rock",
+      "gho":"Ghost",
+      "dra":"Dragon",
+      "dar":"Dark",
+      "ste":"Steel",
+      "fai":"Fairy"
+    },
     "Skills": {
       "acro":"Acrobatics(spd)",
       "athl":"Athletics(atk)",
@@ -39,6 +60,7 @@
       "stea":"Stealth(spd)"
     },
     "Typing": {
+      "non":"None",
       "nor":"Normal",
       "fir":"Fire",
       "wat":"Water",

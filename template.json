@@ -37,6 +37,8 @@
       "secondaryclass": "",
       "thirdclass": "",
       "fourthclass": "",
+      "primarytyping": "None",
+      "secondarytyping:": "None",
       "origin":"",
       "credits": "",
       "attributes": {
@@ -80,7 +82,17 @@
         "prog": {"value": 0, "skilled1": "on", "skilled2": "on"},
         "sloh": {"value": 0, "skilled1": "on", "skilled2": "on"},
         "stea": {"value": 0, "skilled1": "on", "skilled2": "on"}
-      }
+      },
+      "partnermon":
+      {
+        "pokeone": "",
+        "poketwo": "",
+        "pokethree": "",
+        "pokefour": "",
+        "pokefive": "",
+        "pokesix": ""
+      },
+      "PCbox": ""
     },
     "npc": {
       "templates": ["base"],

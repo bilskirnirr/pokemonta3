@@ -20,6 +20,8 @@ pokemonta3.statAbbreviations = {
   spd: 'pokemonta3.Stat.spd.abbr',
 };
 
+
+
 pokemonta3.PCClass = {
   ace: 'pokemonta3.PCClass.ace',
   brd: 'pokemonta3.PCClass.brd',
@@ -31,6 +33,28 @@ pokemonta3.PCClass = {
   pok: 'pokemonta3.PCClass.pok'
 };
  
+pokemonta3.PokeType = {
+  non: 'pokemonta3.PokeType.non',
+  nor: 'pokemonta3.PokeType.nor',
+  fir: 'pokemonta3.PokeType.fir',
+  wat: 'pokemonta3.PokeType.wat',
+  ele: 'pokemonta3.PokeType.ele',
+  gra: 'pokemonta3.PokeType.gra',
+  ice: 'pokemonta3.PokeType.ice',
+  fig: 'pokemonta3.PokeType.fig',
+  poi: 'pokemonta3.PokeType.poi',
+  gro: 'pokemonta3.PokeType.gro',
+  fly: 'pokemonta3.PokeType.fly',
+  psy: 'pokemonta3.PokeType.psy',
+  bug: 'pokemonta3.PokeType.bug',
+  roc: 'pokemonta3.PokeType.roc',
+  gho: 'pokemonta3.PokeType.gho',
+  dra: 'pokemonta3.PokeType.dra',
+  dar: 'pokemonta3.PokeType.dar',
+  ste: 'pokemonta3.PokeType.ste',
+  fai: 'pokemonta3.PokeType.fai',
+};
+
 pokemonta3.skills = {
   acro: 'pokemonta3.Skills.acro',
   athl: 'pokemonta3.Skills.athl',

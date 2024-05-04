@@ -6,7 +6,7 @@
   font-family: pokemonClassic;
   src: url("fonts/Pokemon Classic.ttf");
 }
-.window-content {
+form.trainer {
   font-family: pokemonClassic, pokemonXandY;
   font-size: smaller;
 }
@@ -18,7 +18,7 @@
 }
 #lightinput {
   color: #f8f8f8;
-  background-color: #3a4249;
+  background-color: none;
   text-shadow: 1px 1px #686868;
 }
 .darktrimmedfont.darktrimmedfont {
@@ -37,6 +37,139 @@
   text-shadow: 1px 1px #686868;
   display: grid;
   grid-template-columns: 17% 38% 7% 38%;
+}
+.nonback.nonback {
+  background: #3a4249;
+}
+.norback.norback {
+  background: #a7a684;
+}
+.firback.firback {
+  background: #f98133;
+}
+.watback.watback {
+  background: #6995f6;
+}
+.eleback.eleback {
+  background: #fdd434;
+}
+.graback.graback {
+  background: #7bc956;
+}
+.iceback.iceback {
+  background: #9cdede;
+}
+.figback.figback {
+  background: #c5302a;
+}
+.poiback.poiback {
+  background: #a244a8;
+}
+.groback.groback {
+  background: #dbc177;
+}
+.flyback.flyback {
+  background: #a894ef;
+}
+.psyback.psyback {
+  background: #ee96ee;
+}
+.bugback.bugback {
+  background: #abba38;
+}
+.rocback.rocback {
+  background: #bca539;
+}
+.ghoback.ghoback {
+  background: #7f727d;
+}
+.draback.draback {
+  background: #703cf1;
+}
+.darback.darback {
+  background: #745949;
+}
+.steback.steback {
+  background: #bdbdd6;
+}
+.faiback.faiback {
+  background: #df83be;
+}
+.nonClsfont.nonClsfont {
+  color: #3a4249;
+  text-shadow: 1px 1px #686868;
+}
+.norClsfont.norClsfont {
+  color: #a7a684;
+  text-shadow: 1px 1px #686868;
+}
+.firClsfont.firClsfont {
+  color: #f98133;
+  text-shadow: 1px 1px #686868;
+}
+.watClsfont.watClsfont {
+  color: #6995f6;
+  text-shadow: 1px 1px #686868;
+}
+.eleClsfont.eleClsfont {
+  color: #fdd434;
+  text-shadow: 1px 1px #686868;
+}
+.graClsfont.graClsfont {
+  color: #7bc956;
+  text-shadow: 1px 1px #686868;
+}
+.iceClsfont.iceClsfont {
+  color: #9cdede;
+  text-shadow: 1px 1px #686868;
+}
+.figClsfont.figClsfont {
+  color: #c5302a;
+  text-shadow: 1px 1px #686868;
+}
+.poiClsfont.poiClsfont {
+  color: #a244a8;
+  text-shadow: 1px 1px #686868;
+}
+.groClsfont.groClsfont {
+  color: #dbc177;
+  text-shadow: 1px 1px #686868;
+}
+.flyClsfont.flyClsfont {
+  color: #a894ef;
+  text-shadow: 1px 1px #686868;
+}
+.psyClsfont.psyClsfont {
+  color: #ee96ee;
+  text-shadow: 1px 1px #686868;
+}
+.bugClsfont.bugClsfont {
+  color: #abba38;
+  text-shadow: 1px 1px #686868;
+}
+.rocClsfont.rocClsfont {
+  color: #bca539;
+  text-shadow: 1px 1px #686868;
+}
+.ghoClsfont.ghoClsfont {
+  color: #7f727d;
+  text-shadow: 1px 1px #686868;
+}
+.draClsfont.draClsfont {
+  color: #703cf1;
+  text-shadow: 1px 1px #686868;
+}
+.darClsfont.darClsfont {
+  color: #745949;
+  text-shadow: 1px 1px #686868;
+}
+.steClsfont.steClsfont {
+  color: #bdbdd6;
+  text-shadow: 1px 1px #686868;
+}
+.faiClsfont.faiClsfont {
+  color: #df83be;
+  text-shadow: 1px 1px #686868;
 }
 .shoot form {
   display: flex;
@@ -144,7 +277,7 @@
 .gridrow {
   display: grid;
   grid-template-columns: 50% 50%;
-  align-items: baseline;
+  align-items: center;
   text-align: center;
 }
 .pokemonta3.sheet.actor {
@@ -164,6 +297,7 @@ select {
 }
 .statbox,
 .PCsheet.PCsheet {
+  text-align: center;
   border: 2px solid #404040;
   border-radius: 10px;
   padding: 3px;
@@ -173,7 +307,6 @@ select {
   align-items: center;
   margin: 2px;
   max-width: 170px;
-  text-align: center;
 }
 .PCsheet.PCsheet {
   font-size: 12px;
@@ -239,6 +372,19 @@ input.statinbox {
   height: 10px;
   align-items: center;
 }
+.PCsheet#honor {
+  display: flex;
+  flex-direction: row;
+}
+.gridrow30 {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  align-items: center;
+  text-align: center;
+}
+.PCsheet.typing {
+  height: 36px;
+}
 ol {
   padding-left: 2px;
   padding-right: 2px;
@@ -260,9 +406,43 @@ hr.rounded {
   display: grid;
   grid-template-columns: 15%  85%;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
 .gridrow4 {
   display: grid;
-  grid-template-columns: 35%  55% 10%;
+  grid-template-columns: 65%  25% 10%;
+}
+.gridrow5 {
+  display: grid;
+  grid-template-columns: 35%  40% 25%;
+}
+div.item-quanity.item-quanity {
+  align-items: center;
+  text-align: center;
+}
+.partnermons-list.darktrimmedfont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.partnermon1.partnermon1 {
+  text-align: center;
+  border: 2px solid #404040;
+  border-radius: 10px;
+  padding: 3px;
+  display: flex;
+  margin: 2px;
+  max-width: 200px;
+  align-items: center;
+  background-image: linear-gradient(#006820, #30d850);
+  color: #f8f8f8;
+  text-shadow: 1px 1px #686868;
+}
+.pokeballimage {
+  background-image: url("assets/items/ball/poke.png");
+  width: 32px;
+  height: 32px;
+}
+.partnerinput {
+  width: 150px;
 }
