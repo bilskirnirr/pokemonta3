@@ -10,6 +10,7 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/pokemonta3/templates/actor/parts/actor-items.hbs',
     'systems/pokemonta3/templates/actor/parts/actor-effects.hbs',
     'systems/pokemonta3/templates/actor/parts/actor-partnermon.hbs',
+    'systems/pokemonta3/templates/actor/parts/actor-poke-moves.hbs',
     // Item partials
     'systems/pokemonta3/templates/item/parts/item-effects.hbs',
   ]);

@@ -385,6 +385,9 @@ input.statinbox {
 .PCsheet.typing {
   height: 36px;
 }
+.item-controls {
+  text-align: end;
+}
 ol {
   padding-left: 2px;
   padding-right: 2px;

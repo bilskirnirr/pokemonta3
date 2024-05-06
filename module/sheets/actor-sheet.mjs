@@ -19,6 +19,7 @@ export class Pokemonta3ActorSheet extends ActorSheet {
           navSelector: '.sheet-tabs',
           contentSelector: '.sheet-body',
           initial: 'features',
+          initial: 'moves',
         },
       ],
     });
@@ -119,6 +120,7 @@ export class Pokemonta3ActorSheet extends ActorSheet {
     // Initialize containers.
     const gear = [];
     const features = [];
+    const moves = [];
     const spells = {
       0: [],
       1: [],
@@ -143,6 +145,11 @@ export class Pokemonta3ActorSheet extends ActorSheet {
       else if (i.type === 'feature') {
         features.push(i);
       }
+
+      // Append to moves.
+      else if (i.type === 'move') {
+        moves.push(i);
+      }
       // Append to spells.
       else if (i.type === 'spell') {
         if (i.system.spellLevel != undefined) {
@@ -154,6 +161,7 @@ export class Pokemonta3ActorSheet extends ActorSheet {
     // Assign and return
     context.gear = gear;
     context.features = features;
+    context.moves = moves;
     context.spells = spells;
   }
 

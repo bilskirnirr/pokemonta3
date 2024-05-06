@@ -7,7 +7,11 @@
     <a class="darkinput" data-tab="features">Features</a> /
     <a class="darkinput" data-tab="description">Description</a> /
     <a class="darkinput" data-tab="items">Items</a> /
+    {{#if (eq system.primaryclass "pok")}}   {{!-- If playing pokemon this appears --}}
+    <a class="darkinput" data-tab="trainermoves">Moves</a>
+    {{else}}
     <a class="darkinput" data-tab="partnermon">Pokemon</a>
+    {{/if}}
   </nav>
 
   {{!-- Sheet Body --}}
@@ -36,9 +40,6 @@
     <div> 
       <p class="darktrimmedfont skillfeaturetitle"> Features</p>
       {{> "systems/pokemonta3/templates/actor/parts/actor-features.hbs"}}
-
-
-
     </div>
 
 
@@ -74,6 +75,16 @@
     <div class="tab items" data-group="primary" data-tab="items">
        {{> "systems/pokemonta3/templates/actor/parts/actor-items.hbs"}}
     </div>
+
+    {{!-- Pokemon Class Moves Tab --}}
+    <div class="tab trainermoves flexcol" data-group="primary" data-tab="trainermoves">
+      <div> 
+        <p class="darktrimmedfont skillfeaturetitle"> Moves</p>
+        {{> "systems/pokemonta3/templates/actor/parts/actor-poke-moves.hbs"}}
+      </div>
+    </div>
+
+
 
     {{!-- Active Pokemon partnermon Tab --}}
     <div class="tab partnermon flexcol" data-group="primary" data-tab="partnermon">
