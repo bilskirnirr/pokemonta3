@@ -1,5 +1,28 @@
 {
   "pokemonta3": {
+    "Nature": {
+      "non": "None",
+      "lon": "Lonely", 
+      "bra": "Brave",
+      "ada": "Adamant",
+      "nau": "Naughty",
+      "bol": "Bold",
+      "rel": "Relaxed",
+      "imp": "Impish",
+      "lax": "Lax",
+      "tim": "Timid",
+      "has": "Hasty",
+      "jol": "Jolly",
+      "nav": "Naive",
+      "mod": "Modest",
+      "mil": "Mild",
+      "qui": "Quiet",
+      "ras": "Rash",
+      "cal": "Calm",
+      "gen": "Gentle",
+      "sas": "Sassy",
+      "car": "Careful"
+    },
     "Stat": {
       "atk":"Attack",
       "def":"Defense",

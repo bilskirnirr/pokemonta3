@@ -78,7 +78,17 @@
 
     {{!-- Pokemon Class Moves Tab --}}
     <div class="tab trainermoves flexcol" data-group="primary" data-tab="trainermoves">
-      <div> 
+      
+      <div class="gridrow30-60"> {{!-- Pokemon Nature/Species Section--}}
+          <select class="PCsheet typing pokClsfont" name="system.nature"> Nature 
+            {{selectOptions optionObjnature selected=system.nature localize=true}}
+          </select> 
+          <div class="PCsheet pokClsfont" id="nature"> Species:
+            <input  class="Noboarder {{system.primaryclass}}back" id="nature" name="system.species" type="text" value="{{system.species}}" placeholder="human"/>
+          </div>
+      </div>
+     
+      <div> {{!-- Pokemon Moves Section--}}
         <p class="darktrimmedfont skillfeaturetitle"> Moves</p>
         {{> "systems/pokemonta3/templates/actor/parts/actor-poke-moves.hbs"}}
       </div>

@@ -376,11 +376,31 @@ input.statinbox {
   display: flex;
   flex-direction: row;
 }
-.gridrow30 {
+.gridrow30,
+.gridrow30-60 {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
   align-items: center;
-  text-align: center;
+  text-align: justify;
+  max-width: none;
+}
+.gridrow30 {
+  grid-template-columns: 30% 30% 30%;
+}
+.gridrow30-60 {
+  grid-template-columns: 30% 60%;
+  max-width: none;
+}
+.gridrow30-60#nature {
+  grid-template-columns: 30% 60%;
+  max-width: none;
+}
+.PCsheet#nature {
+  flex-direction: row;
+  max-width: none;
+  width: 290px;
+}
+input#nature {
+  min-width: 190px;
 }
 .PCsheet.typing {
   height: 36px;

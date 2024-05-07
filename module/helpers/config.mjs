@@ -20,6 +20,30 @@ pokemonta3.statAbbreviations = {
   spd: 'pokemonta3.Stat.spd.abbr',
 };
 
+pokemonta3.pokemonnatures = {
+  non: 'pokemonta3.Nature.non',
+  lon: 'pokemonta3.Nature.lon',
+  bra: 'pokemonta3.Nature.bra',
+  ada: 'pokemonta3.Nature.ada',
+  nau: 'pokemonta3.Nature.nau',
+  bol: 'pokemonta3.Nature.bol',
+  rel: 'pokemonta3.Nature.rel',
+  imp: 'pokemonta3.Nature.imp',
+  lax: 'pokemonta3.Nature.lax',
+  tim: 'pokemonta3.Nature.tim',
+  has: 'pokemonta3.Nature.has',
+  jol: 'pokemonta3.Nature.jol',
+  nav: 'pokemonta3.Nature.nav',
+  mod: 'pokemonta3.Nature.mod',
+  mil: 'pokemonta3.Nature.mil',
+  qui: 'pokemonta3.Nature.qui',
+  ras: 'pokemonta3.Nature.ras',
+  cal: 'pokemonta3.Nature.cal',
+  gen: 'pokemonta3.Nature.gen',
+  sas: 'pokemonta3.Nature.sas',
+  car: 'pokemonta3.Nature.car'
+}
+
 
 
 pokemonta3.PCClass = {
