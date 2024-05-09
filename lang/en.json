@@ -120,9 +120,45 @@
       "Item": "pokemonta3 Item Sheet"
     },
     "Item": {
-      "Spell": {
-        "SpellLVL": "Level {level} Spells",
-        "AddLVL": "Add LVL {level}"
+      "Berry": {
+        "flavorSymbol": {
+          "dry": "●",
+          "bit": "■",
+          "spi": "◆",
+          "sou": "▲",
+          "swe": "★"
+        },
+        "flavor" : {
+          "dry": "Dry",
+          "bit": "Bitter",
+          "spi": "Spicy",
+          "sou": "Sour",
+          "swe": "Sweet"
+        },
+        "raritySymbol": {
+          "com":"●",
+          "unc":"◆",
+          "rar":"★"
+        },
+        "rarity": {
+          "com":"Common",
+          "unc":"Uncommon",
+          "rar":"Rare"
+        }
+      },
+      "Itemtype": {
+        "pok": "Pokeball",
+        "med": "Medical Item",
+        "hel": "Held Item",
+        "ber": "Berries",
+        "cot": "Contest Treats",
+        "cst": "Contest Accs.",
+        "evo": "Evolution Item",
+        "tms": "Technical Machine",
+        "tpb": "Trainer Bundle Pack",
+        "pui": "Portable Utility Item",
+        "sgr": "Survival Gear",
+        "oth": "General Item"
       }
     },
     "Effect": {

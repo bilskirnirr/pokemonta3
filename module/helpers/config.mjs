@@ -20,6 +20,49 @@ pokemonta3.statAbbreviations = {
   spd: 'pokemonta3.Stat.spd.abbr',
 };
 
+pokemonta3.itemtype = {
+  pok: 'pokemonta3.Item.Itemtype.pok',
+  med: 'pokemonta3.Item.Itemtype.med',
+  hel: 'pokemonta3.Item.Itemtype.hel',
+  ber: 'pokemonta3.Item.Itemtype.ber',
+  cot: 'pokemonta3.Item.Itemtype.cot',
+  cst: 'pokemonta3.Item.Itemtype.cst',
+  evo: 'pokemonta3.Item.Itemtype.evo',
+  tms: 'pokemonta3.Item.Itemtype.tms',
+  tpb: 'pokemonta3.Item.Itemtype.tpb',
+  pui: 'pokemonta3.Item.Itemtype.pui',
+  sgr: 'pokemonta3.Item.Itemtype.sgr',
+  oth: 'pokemonta3.Item.Itemtype.oth'
+}
+
+pokemonta3.berryflavorsymbol = {
+  dry: 'pokemonta3.Item.Berry.flavorSymbol.dry',
+  bit: 'pokemonta3.Item.Berry.flavorSymbol.bit',
+  spi: 'pokemonta3.Item.Berry.flavorSymbol.spi',
+  sou: 'pokemonta3.Item.Berry.flavorSymbol.sou',
+  swe: 'pokemonta3.Item.Berry.flavorSymbol.swe'
+}
+
+pokemonta3.berryflavorname = {
+  dry: 'pokemonta3.Item.Berry.flavor.dry',
+  bit: 'pokemonta3.Item.Berry.flavor.bit',
+  spi: 'pokemonta3.Item.Berry.flavor.spi',
+  sou: 'pokemonta3.Item.Berry.flavor.sou',
+  swe: 'pokemonta3.Item.Berry.flavor.swe'
+}
+
+pokemonta3.berryraritysymbol = {
+  com: 'pokemonta3.Item.Berry.raritySymbol.com',
+  unc: 'pokemonta3.Item.Berry.raritySymbol.unc',
+  rar: 'pokemonta3.Item.Berry.raritySymbol.rar'
+}
+
+pokemonta3.berryrarityname = {
+  com: 'pokemonta3.Item.Berry.rarity.com',
+  unc: 'pokemonta3.Item.Berry.rarity.unc',
+  rar: 'pokemonta3.Item.Berry.rarity.rar'
+}
+
 pokemonta3.pokemonnatures = {
   non: 'pokemonta3.Nature.non',
   lon: 'pokemonta3.Nature.lon',
