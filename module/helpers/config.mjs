@@ -87,7 +87,21 @@ pokemonta3.pokemonnatures = {
   car: 'pokemonta3.Nature.car'
 }
 
+pokemonta3.MoveChar = {
+  atk: 'pokemonta3.Moves.chr.atk',
+  spc: 'pokemonta3.Moves.chr.spc',
+  sta: 'pokemonta3.Moves.chr.sta'
+}
 
+pokemonta3.MoveRange = {
+  non: 'pokemonta3.Moves.rng.non',
+  bls: 'pokemonta3.Moves.rng.bls',
+  bem: 'pokemonta3.Moves.rng.bem',
+  brs: 'pokemonta3.Moves.rng.brs',
+  mel: 'pokemonta3.Moves.rng.mel',
+  rng: 'pokemonta3.Moves.rng.rng',
+  wav: 'pokemonta3.Moves.rng.wav'
+}
 
 pokemonta3.PCClass = {
   ace: 'pokemonta3.PCClass.ace',

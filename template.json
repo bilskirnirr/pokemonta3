@@ -160,7 +160,12 @@
       "accuracychkspd": "d20 + @spd.mod",
       "accuracychkatk": "d20 + @atk.mod",
       "accuracychksatk":"d20 + @satk.mod",
-      "range": "melee"
+      "moveChar": "none",
+      "movetyping": "none",
+      "range": "melee",
+      "distance": 5,
+      "radius": 0,
+      "width": 0
     }
   }
 }

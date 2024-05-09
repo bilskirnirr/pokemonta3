@@ -1,5 +1,21 @@
 {
   "pokemonta3": {
+    "Moves":{
+      "chr": {
+        "atk": "Attack",
+        "spc": "Special",
+        "sta": "Status"
+      },
+      "rng": {
+        "non": "None",
+        "bls": "Blast",
+        "bem": "Beam",
+        "brs": "Burst",
+        "mel": "Melee",
+        "rng": "Ranged",
+        "wav": "Wave"
+      }
+    },
     "Nature": {
       "non": "None",
       "lon": "Lonely", 
