@@ -149,8 +149,7 @@
       "restorevalue": "",
       "itemeffect":"",
       "berryflavor":"",
-      "berryrarity":"",
-      
+      "berryrarity":""      
     },
     "feature": {
       "templates": ["base"]
