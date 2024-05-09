@@ -14,6 +14,14 @@
         "mel": "Melee",
         "rng": "Ranged",
         "wav": "Wave"
+      },
+      "eff": {
+        "neu": "Neutral",
+        "sup": "Super Effective",
+        "ext": "Extremely Effective",
+        "res": "Resisted",
+        "shi": "Shielded",
+        "noe": "No Effect"
       }
     },
     "Nature": {

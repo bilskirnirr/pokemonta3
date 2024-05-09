@@ -93,6 +93,15 @@ pokemonta3.MoveChar = {
   sta: 'pokemonta3.Moves.chr.sta'
 }
 
+pokemonta3.MoveEffect = {
+  neu: 'pokemonta3.Moves.eff.neu',
+  sup: 'pokemonta3.Moves.eff.sup',
+  ext: 'pokemonta3.Moves.eff.ext',
+  res: 'pokemonta3.Moves.eff.res',
+  shi: 'pokemonta3.Moves.eff.shi',
+  noe: 'pokemonta3.Moves.eff.noe'
+}
+
 pokemonta3.MoveRange = {
   non: 'pokemonta3.Moves.rng.non',
   bls: 'pokemonta3.Moves.rng.bls',
