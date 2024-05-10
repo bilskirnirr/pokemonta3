@@ -5,6 +5,14 @@
 I highly suggest against trying to use system yet. As there is no Pokemon Sheets or Move Sheets. So trying to create those will be a nada.
 
 
+
+
+
+
+
+
+## Boiler plate default stuff below: Not deleting yet since i might need to reference.
+
 ![Foundry v11](https://img.shields.io/badge/foundry-v11-green)
 
 This system is a pokemonta3 system that you can use as a starting point for building your own custom systems. It's similar to Simple World-building, but has examples of creating attributes in code rather than dynamically through the UI.
