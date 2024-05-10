@@ -64,6 +64,7 @@ export class Pokemonta3Item extends Item {
         speaker: speaker,
         rollMode: rollMode,
         flavor: label,
+        content: item.system.description ?? '',
       });
       return roll;
     }
