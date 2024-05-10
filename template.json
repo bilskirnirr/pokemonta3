@@ -142,10 +142,10 @@
     },
     "item": {
       "templates": ["base"],
-      "formula": "d20 + @atk.mod + ceil(@lvl / 2)",
+      "formula": "d100",
       "quantity": 1,
       "itemtype": "",
-      "catchbonus": 0,
+      "catchbonus": "",
       "restorevalue": "",
       "itemeffect":"",
       "berryflavor":"",

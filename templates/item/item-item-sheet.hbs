@@ -1,62 +1,47 @@
-<form class="{{cssClass}}" autocomplete="off">
-  <header class="sheet-header">
-    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+<form class="item {{cssClass}} pix185-250 pokeitembackground" autocomplete="off">
+
+  <div class="sidebar item">
+    <img class="PCsheet profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+      <h1 class="PCsheet darktrimmedfont charname"><input class="Noboarder" id="darkinput" name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
       <div class="grid grid-2col">
-        <div class="resource">
+        <div class="PCsheet darktrimmedfont resource gridrow80-20">
           <label class="resource-label">Quantity</label>
-          <input type="text" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+          <input type="text" name="system.quantity" id="darkinput" value="{{system.quantity}}" data-dtype="Number" />
         </div>
-        <div class="resource">
-          <label class="resource-label">Weight</label>
-          <input type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
+        <div class="PCsheet darktrimmedfont resource">
+          <select class="darktrimmedfont" name="system.itemtype">
+            {{selectOptions optionObjitem selected=system.itemtype localize=true}}
+          </select>
         </div>
-      </div>
-    </div>
-  </header>
-
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="attributes">Attributes</a>
-  </nav>
-
-  {{!-- Sheet Body --}}
-  <section class="sheet-body">
-
-    {{!-- Description Tab --}}
-    <div class="tab" data-group="primary" data-tab="description">
-      {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the
-      rollData prop. --}}
-      {{editor system.description target="system.description" rollData=rollData button=true owner=owner
-      editable=editable}}
-    </div>
-
-    {{!-- Attributes Tab --}}
-    <div class="tab attributes" data-group="primary" data-tab="attributes">
-      {{!-- As you add new fields, add them in here! --}}
-      <div class="resource">
-        <label class="resource-label">Roll Formula:</label>
-        <span>{{system.formula}}</span>
-        <div class="grid grid-4col">
-          <div class="grid-span-1">
-            <label class="resource-label">Number of Dice</label>
-            <input type="text" name="system.roll.diceNum" value="{{system.roll.diceNum}}" data-dtype="Number" />
-          </div>
-          <div class="grid-span-1">
-            <label class="resource-label">Die Size</label>
-            <input type="text" name="system.roll.diceSize" value="{{system.roll.diceSize}}" data-dtype="String" />
-          </div>
-          <div class="grid-span-2">
-            <label class="resource-label">Roll Modifier</label>
-            <input type="text" name="system.roll.diceBonus" value="{{system.roll.diceBonus}}" data-dtype="String" />
-          </div>
+        {{#if (eq system.itemtype "pok")}}   {{!-- If item is pokeball this appears --}}
+        <div class="PCsheet lighttrimmedfont item">
+         <input class="Noboarder" type="text" name="system.catchbonus" id="lightinput" value="{{system.catchbonus}}" placeholder="Catch Bonus" data-dtype="Number"/>
         </div>
+        {{/if}}
+        {{#if (eq system.itemtype "med")}}   {{!-- If item is medical this appears --}}
+        <div class="PCsheet lighttrimmedfont item">
+         <input class="Noboarder" type="text" name="system.restorevalue" id="lightinput" value="{{system.restorevalue}}" placeholder="Restore Eff."/>
+        </div>
+        {{/if}}
+
+
+
 
       </div>
     </div>
-  </section>
+  </div>
+
+ <div class="PCsheet item description">
+  {{!-- Description Tab --}}
+  {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the
+  rollData prop. --}}
+  <p class="darktrimmedfont skillfeaturetitle"> Description</p>
+  {{editor system.description class="item description" target="system.description" rollData=rollData button=true owner=owner
+  editable=editable}}
+ </div>
+      
+
 </form>
 
 {{log system}}

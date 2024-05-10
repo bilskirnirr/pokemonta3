@@ -55,6 +55,9 @@ export class Pokemonta3ItemSheet extends ItemSheet {
     // Prepare active effects for easier access
     context.effects = prepareActiveEffectCategories(this.item.effects);
 
+    // Add Dropdown for item selection <<---- 
+    context.optionObjitem = CONFIG.pokemonta3.itemtype;
+
     return context;
   }
 

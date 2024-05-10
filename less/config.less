@@ -9,7 +9,7 @@
 }
 
 
-form.trainer {
+form.trainer, form.item, button.item {
     font-family: pokemonClassic, pokemonXandY;
     font-size: smaller;
 }
@@ -133,3 +133,41 @@ form.trainer {
 .darClsfont.darClsfont {color: @dar-color; text-shadow: 1px 1px @font-shadow-light; }
 .steClsfont.steClsfont {color: @ste-color; text-shadow: 1px 1px @font-shadow-light; }
 .faiClsfont.faiClsfont {color: @fai-color; text-shadow: 1px 1px @font-shadow-light; }
+
+.window-content.window-content {
+    background-color: @background-color2;
+    background-image: none;
+}
+
+.gridrow30, .gridrow30-60, .gridrow20-30-30, .gridrow80-20, .gridrow15-35-30, .pix185-250, .gridrow50  {
+    display:grid;
+    align-items:center;
+    text-align: justify;
+    max-width: none;
+}
+.gridrow30 {
+    grid-template-columns: 30% 30% 30%;
+}
+.gridrow30-60{
+    grid-template-columns: 30% 60%;
+    max-width: none;
+}
+.gridrow20-30-30 {
+    grid-template-columns: 20% 30% 30%;
+}
+.gridrow80-20 {
+    grid-template-columns: 80% 20%;
+}
+.gridrow15-35-30 {
+    grid-template-columns: 15% 35% 30%;
+}
+.gridrow50 {
+    grid-template-columns: 50% 50%;
+}
+.sidebar.item {
+    justify-content: center;
+    display: grid;
+}
+.pix185-250 {
+    grid-template-columns: 185px 365px;
+}

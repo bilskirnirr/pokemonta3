@@ -1,14 +1,51 @@
-.shoot {
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    .sheet-content {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .editor {
-        height: 100%
-    }
+.PCsheet.profile-img {
+    justify-self: center;
+    max-width: 100px;
+    max-height: 100px;
+    width:auto;
+    height: auto;
+    min-width: 64px;
+    min-height: 64px;
+    background-color: @poke-background;
+}
+.PCsheet.resource.gridrow80-20 {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+select.darktrimmedfont {
+    max-width: 165px;
+}
+
+.pokemonta3.sheet.item {
+    width: 570px !important;
+    max-height: 300px !important;
+    
+}
+.pokeitembackground {
+    background-image:  url("assets/PokemonSheets/pokeItem5.png");
+    background-position: center; 
+}
+div.editor-content.item {
+    min-width: 340px;
+    min-height: 200px;
+    max-height: 250px;
+    text-align: start;
+}
+.PCsheet.item.description {
+    max-width: 380px;
+}
+.item.editable.pix185-250 {
+    align-items:flex-start;
+}
+element.style.item {
+    height: auto;
+}
+#darkinput.PCsheet.catchrate {
+    height: 38px;
+    background-color: @background-color2;
+    font-family: pokemonClassic, pokemonXandY;
+    justify-content: center;
+}
+#lightinput::placeholder {
+    color: @font-color-light;
 }

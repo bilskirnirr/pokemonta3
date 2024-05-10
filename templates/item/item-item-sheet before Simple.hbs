@@ -1,0 +1,79 @@
+<form class="item {{cssClass}} pix185-250 pokeitembackground" autocomplete="off">
+
+  <div class="sidebar item">
+    <img class="PCsheet profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="PCsheet darktrimmedfont charname"><input class="Noboarder" id="darkinput" name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+      <div class="grid grid-2col">
+        <div class="PCsheet darktrimmedfont resource gridrow80-20">
+          <label class="resource-label">Quantity</label>
+          <input type="text" name="system.quantity" id="darkinput" value="{{system.quantity}}" data-dtype="Number" />
+        </div>
+        <div class="PCsheet darktrimmedfont resource">
+          <select class="darktrimmedfont" name="system.itemtype">
+            {{selectOptions optionObjitem selected=system.itemtype localize=true}}
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Sheet Tab Navigation --}}
+  <div class="naviitem">
+    <nav class="navigationselection sheet-tabs tabs lighttrimmedfont" data-group="primary">
+      <a data-tab="description">Description</a>/
+
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+      {{!-- Description Tab --}}
+      <div class="tab" data-group="primary" data-tab="description">
+        {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the
+        rollData prop. --}}
+        {{editor system.description class="item" target="system.description" rollData=rollData button=true owner=owner
+        editable=editable}}
+      </div>
+
+      {{!-- Attributes Tab --}}
+      <div class="tab attributes" data-group="primary" data-tab="attributes">
+        {{!-- As you add new fields, add them in here! --}}
+        {{#if (eq system.itemtype "pok")}}   {{!-- If item is pokeball this appears --}}
+          <div class="gridrow50">
+          <label class="resource-label">Accuracy Check</label>
+          <button class="PCsheet item rollable darktrimmedfont" id="rollable" for="d100" type="button" data-roll="d100" data-label="d100">Throw Ball! </button> 
+          </div>
+
+          <div class="gridrow50">
+          <label class="resource-label">Catch Roll Bonus</label>
+          <input class="PCsheet darktrimmedfont catchrate" type="item" id="darkinput" name="system.catchbonus" value="{{system.catchbonus}}" data-dtype="Number" />
+          </div>
+
+
+        {{else}}
+          <div class="resource">
+            <label class="resource-label">Roll Formula:</label>
+            <span>{{system.formula}}</span>
+            <div class="grid grid-4col">
+              <div class="grid-span-1">
+                <label class="resource-label">Number of Dice</label>
+
+              </div>
+              <div class="grid-span-1">
+                <label class="resource-label">Die Size</label>
+                <input type="text" name="system.roll.diceSize" value="{{system.roll.diceSize}}" data-dtype="String" />
+              </div>
+              <div class="grid-span-2">
+                <label class="resource-label">Roll Modifier</label>
+                <input type="text" name="system.roll.diceBonus" value="{{system.roll.diceBonus}}" data-dtype="String" />
+              </div>
+            </div>
+          {{/if}}
+
+        </div>
+      </div>
+    </section>
+  </div>
+</form>
+
+{{log system}}
