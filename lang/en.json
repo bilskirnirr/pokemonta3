@@ -2,7 +2,7 @@
   "pokemonta3": {
     "Moves":{
       "chr": {
-        "atk": "Attack",
+        "atk": "Physical",
         "spc": "Special",
         "sta": "Status"
       },
