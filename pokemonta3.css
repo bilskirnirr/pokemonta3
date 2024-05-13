@@ -41,61 +41,61 @@ button.item {
   grid-template-columns: 17% 38% 7% 38%;
 }
 .nonback.nonback {
-  background: #3a4249;
+  background-color: #3a4249;
 }
 .norback.norback {
-  background: #a7a684;
+  background-color: #a7a684;
 }
 .firback.firback {
-  background: #f98133;
+  background-color: #f98133;
 }
 .watback.watback {
-  background: #6995f6;
+  background-color: #6995f6;
 }
 .eleback.eleback {
-  background: #fdd434;
+  background-color: #fdd434;
 }
 .graback.graback {
-  background: #7bc956;
+  background-color: #7bc956;
 }
 .iceback.iceback {
-  background: #9cdede;
+  background-color: #9cdede;
 }
 .figback.figback {
-  background: #c5302a;
+  background-color: #c5302a;
 }
 .poiback.poiback {
-  background: #a244a8;
+  background-color: #a244a8;
 }
 .groback.groback {
-  background: #dbc177;
+  background-color: #dbc177;
 }
 .flyback.flyback {
-  background: #a894ef;
+  background-color: #a894ef;
 }
 .psyback.psyback {
-  background: #ee96ee;
+  background-color: #ee96ee;
 }
 .bugback.bugback {
-  background: #abba38;
+  background-color: #abba38;
 }
 .rocback.rocback {
-  background: #bca539;
+  background-color: #bca539;
 }
 .ghoback.ghoback {
-  background: #7f727d;
+  background-color: #7f727d;
 }
 .draback.draback {
-  background: #703cf1;
+  background-color: #703cf1;
 }
 .darback.darback {
-  background: #745949;
+  background-color: #745949;
 }
 .steback.steback {
-  background: #bdbdd6;
+  background-color: #bdbdd6;
 }
 .faiback.faiback {
-  background: #df83be;
+  background-color: #df83be;
 }
 .nonClsfont.nonClsfont {
   color: #3a4249;
@@ -173,6 +173,15 @@ button.item {
   color: #df83be;
   text-shadow: 1px 1px #686868;
 }
+.atkback.atkback {
+  background-color: #eb5628;
+}
+.spcback.spcback {
+  background-color: #375ab2;
+}
+.staback.staback {
+  background-color: #828282;
+}
 .window-content.window-content {
   background-color: #e0e8e8;
   background-image: none;
@@ -240,6 +249,11 @@ select.darktrimmedfont {
   background-image: url("assets/PokemonSheets/pokeItem5.png");
   background-position: center;
 }
+.pokeitembackground2 {
+  background-image: url("assets/PokemonSheets/pokeItem5.png");
+  background-position: center;
+  background-color: #3a4249;
+}
 div.editor-content.item {
   min-width: 340px;
   min-height: 200px;
@@ -265,7 +279,7 @@ element.style.item {
   color: #f8f8f8;
 }
 .aceback.aceback {
-  background: #e44649;
+  background-color: #e44649;
 }
 .aceClsfont.aceClsfont {
   color: #e44649;
@@ -275,7 +289,7 @@ element.style.item {
   background-image: url("assets/PokemonSheets/CharBackground-ace.png");
 }
 .brdback.brdback {
-  background: #90c655;
+  background-color: #90c655;
 }
 .brdClsfont.brdClsfont {
   color: #90c655;
@@ -285,7 +299,7 @@ element.style.item {
   background-image: url("assets/PokemonSheets/CharBackground-brd.png");
 }
 .crdback.crdback {
-  background: #5994ca;
+  background-color: #5994ca;
 }
 .crdClsfon.crdClsfont {
   color: #5994ca;
@@ -295,7 +309,7 @@ element.style.item {
   background-image: url("assets/PokemonSheets/CharBackground-crd.png");
 }
 .rngback.rngback {
-  background: #eeb711;
+  background-color: #eeb711;
 }
 .rngClsfont.rngClsfont {
   color: #eeb711;
@@ -305,7 +319,7 @@ element.style.item {
   background-image: url("assets/PokemonSheets/CharBackground-rng.png");
 }
 .rshback.rshback {
-  background: #bd57e0;
+  background-color: #bd57e0;
 }
 .rshClsfont.rshClsfont {
   color: #bd57e0;
@@ -315,7 +329,7 @@ element.style.item {
   background-image: url("assets/PokemonSheets/CharBackground-rsh.png");
 }
 .marback.marback {
-  background: #ac6231;
+  background-color: #ac6231;
 }
 .marClsfont.marClsfont {
   color: #ac6231;
@@ -325,7 +339,7 @@ element.style.item {
   background-image: url("assets/PokemonSheets/CharBackground-mar.png");
 }
 .psyback.psyback {
-  background: #ee96ee;
+  background-color: #ee96ee;
 }
 .psyClsfont.psyClsfont {
   color: #ee96ee;
@@ -335,7 +349,7 @@ element.style.item {
   background-image: url("assets/PokemonSheets/CharBackground-psy.png");
 }
 .pokback.pokback.pokback {
-  background: #111111;
+  background-color: #111111;
   color: #f8f8f8;
   text-shadow: 1px 1px #686868;
 }

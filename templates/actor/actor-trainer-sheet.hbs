@@ -27,12 +27,12 @@
       <p class="darktrimmedfont skillfeaturetitle"> Skills</p>
       {{#each system.skills as |skill key|}}
       <div class="skill">
-        <input class="statinput" type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
+        <input class="statinput" type="text" name="system.skills.{{key}}.modifier" value="{{skill.modifier}}" data-dtype="Number"/>
         <div class="checkboxes">
           <input class="statinbox" type="checkbox" name="system.skills.{{key}}.skill1" value="{{skill.skill1}}" {{checked skill.skill1}} data-dtype="Boolean"/>
           <input class="statinbox" type="checkbox" name="system.skills.{{key}}.skill2" value="{{skill.skill2}}" {{checked skill.skill2}} data-dtype="Boolean"/>
         </div>
-        <label class="statname rollable" id="rollable" for="system.skills.{{key}}.value"  data-roll="d20+@skills.{{key}}.value" data-label="{{skill.label}}">{{skill.label}}</label>
+        <label class="statname rollable" id="rollable" for="system.skills.{{key}}.modifier"  data-roll="d20+@skills.{{key}}.modifier" data-label="{{skill.label}}">{{skill.label}}</label>
       </div>
       {{/each}}
     </div>

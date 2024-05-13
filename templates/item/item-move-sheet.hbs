@@ -1,0 +1,34 @@
+<form class="item {{cssClass}} pix185-250 {{system.movetyping}}back pokeitembackground" autocomplete="off">
+
+  <div class="sidebar item">
+    <img class="PCsheet profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="PCsheet darktrimmedfont charname"><input class="Noboarder" id="darkinput" name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+      <div class="grid grid-2col">
+        <h1 class="{{system.moveChar}}back darktrimmedfont PCsheet">  {{!-- Primary Class Selector --}}
+          <select class="{{system.moveChar}}back lighttrimmedfont" name="system.moveChar">
+            {{selectOptions optionObjitemkind selected=system.moveChar localize=true}}
+          </select>
+        </h1>
+        <h1 class="{{system.movetyping}}back darktrimmedfont PCsheet">  {{!-- Primary Class Selector --}}
+          <select class="{{system.movetyping}}back lighttrimmedfont" name="system.movetyping">
+            {{selectOptions optionObjitemtyping selected=system.movetyping localize=true}}
+          </select>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+ <div class="PCsheet item description">
+  {{!-- Description Tab --}}
+  {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the
+  rollData prop. --}}
+  <p class="{{system.movetyping}}back darktrimmedfont skillfeaturetitle"> Description</p>
+  {{editor system.description class="item description" target="system.description" rollData=rollData button=true owner=owner
+  editable=editable}}
+ </div>
+      
+
+</form>
+
+{{log system}}

@@ -57,6 +57,10 @@ export class Pokemonta3ItemSheet extends ItemSheet {
 
     // Add Dropdown for item selection <<---- 
     context.optionObjitem = CONFIG.pokemonta3.itemtype;
+    context.optionObjitemtyping = CONFIG.pokemonta3.PokeType;
+    context.optionObjitemkind = CONFIG.pokemonta3.MoveChar;
+    context.optionObjitemflavor = CONFIG.pokemonta3.berryflavorsymbol;
+    context.optionObjitemrare = CONFIG.pokemonta3.berryraritysymbol;
 
     return context;
   }

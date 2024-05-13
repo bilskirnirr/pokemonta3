@@ -66,24 +66,24 @@
         }
       },
       "skills": {
-        "acro": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "athl": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "bluf": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "conc": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "cons": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "dipl": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "engi": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "hist": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "insi": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "inve": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "medi": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "natu": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "perc": {"value": 0, "skilled1": "on", "skilled2": "on"}, 
-        "perf": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "pokh": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "prog": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "sloh": {"value": 0, "skilled1": "on", "skilled2": "on"},
-        "stea": {"value": 0, "skilled1": "on", "skilled2": "on"}
+        "acro": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"spd"},
+        "athl": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"atk"},
+        "bluf": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"sdef"},
+        "conc": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"def"},
+        "cons": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"def"},
+        "dipl": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"sdef"},
+        "engi": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"satk"},
+        "hist": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"satk"},
+        "insi": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"sdef"},
+        "inve": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"satk"},
+        "medi": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"satk"},
+        "natu": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"satk"},
+        "perc": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"sdef"}, 
+        "perf": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"sdef"},
+        "pokh": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"sdef"},
+        "prog": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"satk"},
+        "sloh": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"spd"},
+        "stea": {"modifier": 0, "skilled1": "on", "skilled2": "on", "relstat":"spd"}
       },
       "partnermon":
       {
@@ -152,7 +152,8 @@
       "berryrarity":""      
     },
     "feature": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "featuresource": ""
     },
     "move": {
       "templates": ["base"],
