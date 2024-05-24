@@ -2,10 +2,10 @@
   <div>
 
   {{!-- Sheet Tab Navigation --}}
-  <nav class="{{system.primaryclass}}back navigationselection sheet-tabs tabs" data-group="primary">
+  <nav class="{{system.primaryclass}}back trainer navigationselection sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="darkinput" data-tab="features">Features</a> /
-    <a class="darkinput" data-tab="description">Description</a> /
+    <a class="darkinput" data-tab="description">Desc.</a> /
     <a class="darkinput" data-tab="items">Items</a> /
     {{#if (eq system.primaryclass "pok")}}   {{!-- If playing pokemon this appears --}}
     <a class="darkinput" data-tab="trainermoves">Moves</a>
@@ -23,7 +23,7 @@
 
         
     {{!-- Trainer Skills --}}
-    <div class="skillbox {{system.primaryclass}}Clsfont">
+    <div class="skillbox trainer {{system.primaryclass}}Clsfont">
       <p class="darktrimmedfont skillfeaturetitle"> Skills</p>
       {{#each system.skills as |skill key|}}
       <div class="skill">
@@ -51,8 +51,8 @@
     {{!-- Biography Tab --}}
     <div class="tab biography " data-group="primary" data-tab="description">
       <div class="gridrow30">
-        <div class="PCsheet {{system.primaryclass}}back" id="honor"> Honor
-         <input  class="Noboarder {{system.primaryclass}}back" name="system.honor.value" type="text" value="{{system.honor.value}}" placeholder="Honor"/>
+        <div class="PCsheet trainer {{system.primaryclass}}back" id="honor"> Honor
+         <input  class="Noboarder trainer {{system.primaryclass}}back" name="system.honor.value" type="text" value="{{system.honor.value}}" placeholder="Honor"/>
         </div>
 
         {{#if (eq system.primaryclass "pok")}}   {{!-- If playing pokemon this appears --}}
@@ -73,7 +73,11 @@
 
     {{!-- Owned Items Tab --}}
     <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/pokemonta3/templates/actor/parts/actor-items.hbs"}}
+      {{#if (eq system.primaryclass "pok")}} 
+      {{else}}
+      {{> "systems/pokemonta3/templates/actor/parts/actor-poke-moves.hbs"}} 
+      {{/if}}
+      {{> "systems/pokemonta3/templates/actor/parts/actor-items.hbs"}}
     </div>
 
     {{!-- Pokemon Class Moves Tab --}}
@@ -84,7 +88,7 @@
             {{selectOptions optionObjnature selected=system.nature localize=true}}
           </select> 
           <div class="PCsheet pokClsfont" id="nature"> Species:
-            <input  class="Noboarder {{system.primaryclass}}back" id="nature" name="system.species" type="text" value="{{system.species}}" placeholder="human"/>
+            <input  class="Noboarder trainer {{system.primaryclass}}back" id="nature" name="system.species" type="text" value="{{system.species}}" placeholder="human"/>
           </div>
       </div>
      
@@ -108,18 +112,18 @@
 
   <div class="sidebar"> {{!-- Side Bar--}}
 
-    <h1 class="{{system.primaryclass}}back PCsheet">  {{!-- Primary Class Selector --}}
-      <select class="{{system.primaryclass}}back" name="system.primaryclass">
+    <h1 class="{{system.primaryclass}}back trainer PCsheet">  {{!-- Primary Class Selector --}}
+      <select class="{{system.primaryclass}}back trainer" name="system.primaryclass">
         {{selectOptions optionObj selected=system.primaryclass localize=true}}
       </select>
       <div class="gridrow">
         Level
-      <input class="Noboarder {{system.primaryclass}}back" name="system.attributes.level.value" type="number" value="{{system.attributes.level.value}}" placeholder="1"/>  
+      <input class="Noboarder {{system.primaryclass}}back trainer" name="system.attributes.level.value" type="number" value="{{system.attributes.level.value}}" placeholder="1"/>  
       </div>
     </h1>
 
     {{!-- Trainer image --}}
-    <img class="{{system.primaryclass}}back PCsheet" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="170"/>  
+    <img class="{{system.primaryclass}}back trainer PCsheet" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="170"/>  
 
     {{!-- Trainer Name --}}
     <input class="PCsheet lighttrimmedfont" name="name" type="text" value="{{actor.name}}" placeholder="Trainer Name"/>
@@ -132,7 +136,7 @@
       <input class="HPrimmedfont" name="system.health.max" type="text" value="{{system.health.max}}"/>
     </div>
     {{!-- Trainer Stats --}}
-    <div class="statbox {{system.primaryclass}}Clsfont">
+    <div class="statbox {{system.primaryclass}}Clsfont trainer">
       {{#each system.stats as |stat key|}}
       <div class="stats">
         <label class="statname rollable" id="rollable" for="system.stats.{{key}}.value"  data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
@@ -143,21 +147,12 @@
     </div>
 
         {{!-- Other Classes --}}
-    <input class="PCsheet {{system.primaryclass}}back" name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder="Second Class"/>
-    <input class="PCsheet {{system.primaryclass}}back" name="system.thirdclass" type="text" value="{{system.thirdclass}}" placeholder="Third Class"/>
-    <input class="PCsheet {{system.primaryclass}}back" name="system.fourthclass" type="text" value="{{system.fourthclass}}" placeholder="Fourth Class"/>    
+    <input class="PCsheet {{system.primaryclass}}back trainer" name="system.secondaryclass" type="text" value="{{system.secondaryclass}}" placeholder="Second Class"/>
+    <input class="PCsheet {{system.primaryclass}}back trainer" name="system.thirdclass" type="text" value="{{system.thirdclass}}" placeholder="Third Class"/>
+    <input class="PCsheet {{system.primaryclass}}back trainer" name="system.fourthclass" type="text" value="{{system.fourthclass}}" placeholder="Fourth Class"/>    
         {{!-- Origin and Money --}}
-    <input class="PCsheet {{system.primaryclass}}Clsfont origincredit" name="system.origin" type="text" value="{{system.origin}}" placeholder="Origin"/>         
-    <input class="PCsheet {{system.primaryclass}}Clsfont origincredit" name="system.credits" type="text" value="{{system.credits}}" placeholder="$ Credits"/>      
-
-
-
-
-
-
-
-
-
+    <input class="PCsheet {{system.primaryclass}}Clsfont trainer origincredit" name="system.origin" type="text" value="{{system.origin}}" placeholder="Origin"/>         
+    <input class="PCsheet {{system.primaryclass}}Clsfont trainer origincredit" name="system.credits" type="text" value="{{system.credits}}" placeholder="$ Credits"/>      
 
   </div>
 

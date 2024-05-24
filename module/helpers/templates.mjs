@@ -8,6 +8,7 @@ export const preloadHandlebarsTemplates = async function () {
     // Actor partials.
     'systems/pokemonta3/templates/actor/parts/actor-features.hbs',
     'systems/pokemonta3/templates/actor/parts/actor-items.hbs',
+    'systems/pokemonta3/templates/actor/parts/actor-held-item.hbs',
     'systems/pokemonta3/templates/actor/parts/actor-effects.hbs',
     'systems/pokemonta3/templates/actor/parts/actor-partnermon.hbs',
     'systems/pokemonta3/templates/actor/parts/actor-poke-moves.hbs',

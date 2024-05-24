@@ -1,0 +1,49 @@
+<ol class='items-list darktrimmedfont'>
+  <li class='item flexrow items-header'>
+    <div class='item-name'>{{localize 'Name'}}</div>
+    <div class='item-controls'>
+      <a
+        class='item-control item-create'
+        title='Create item'
+        data-type='move'
+      >
+        <i class='fas fa-plus'></i>
+        {{localize 'DOCUMENT.New' type='move'}}
+      </a>
+    </div>
+
+  </li>
+  <hr class="rounded">
+  {{#each moves as |item id|}}
+    <li class='item gridrow1' data-item-id='{{item._id}}'>
+      <div class='item-name gridrow2'>
+        <div class='item-image'>
+          <a class='rollable' data-roll-type='item'>
+            <img
+              class="lighttrimmedfont"
+              src='{{item.img}}'
+              title='{{item.name}}'
+              width='24'
+              height='24'
+            />
+          </a>
+        </div>
+        <h4 class='rollable' data-roll-type='item' id="rollable">{{item.name}}</h4>
+      </div>
+      <div class='item-controls'>
+        <a
+          class='item-control item-edit'
+          title='{{localize "DOCUMENT.Edit" type='move'}}'
+        >
+          <i class='fas fa-edit'></i>
+        </a>
+        <a
+          class='item-control item-delete'
+          title='{{localize "DOCUMENT.Delete" type='move'}}'
+        >
+          <i class='fas fa-trash'></i>
+        </a>
+      </div>
+    </li>
+  {{/each}}
+</ol>

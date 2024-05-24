@@ -9,7 +9,7 @@
 }
 
 
-form.trainer, form.item, button.item {
+form.trainer, form.pokemon, form.item, button.item {
     font-family: pokemonClassic, pokemonXandY;
     font-size: smaller;
 }
@@ -59,7 +59,7 @@ form.trainer, form.item, button.item {
 @rng-color: #eeb711;
 @rsh-color: #bd57e0;
 @mar-color: #ac6231;
-@psy-color: #ee96ee;
+@pst-color: #ee96ee;
 @pok-color: #111111;
 
 
@@ -134,6 +134,27 @@ form.trainer, form.item, button.item {
 .steClsfont.steClsfont {color: @ste-color; text-shadow: 1px 1px @font-shadow-light; }
 .faiClsfont.faiClsfont {color: @fai-color; text-shadow: 1px 1px @font-shadow-light; }
 
+.nonbackround {background-image:  url("assets/PokemonSheets/TypeBackground - None.png")}
+.norbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Normal.png")}
+.firbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Fire.png")}
+.watbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Water.png")}
+.elebackround {background-image:  url("assets/PokemonSheets/TypeBackground - Electric.png")}
+.grabackround {background-image:  url("assets/PokemonSheets/TypeBackground - Grass.png")}
+.icebackround {background-image:  url("assets/PokemonSheets/TypeBackground - Ice.png")}
+.figbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Fighting.png")}
+.poibackround {background-image:  url("assets/PokemonSheets/TypeBackground - Posion.png")}
+.grobackround {background-image:  url("assets/PokemonSheets/TypeBackground - Ground.png")}
+.flybackround {background-image:  url("assets/PokemonSheets/TypeBackground - Flying.png")}
+.psybackround {background-image:  url("assets/PokemonSheets/TypeBackground - Psychic.png")}
+.bugbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Bug.png")}
+.rocbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Rock.png")}
+.ghobackround {background-image:  url("assets/PokemonSheets/TypeBackground - Ghost.png")}
+.drabackround {background-image:  url("assets/PokemonSheets/TypeBackground - Dragon.png")}
+.darbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Dark.png")}
+.stebackround {background-image:  url("assets/PokemonSheets/TypeBackground - Steel.png")}
+.faibackround {background-image:  url("assets/PokemonSheets/TypeBackground - Fairy.png")}
+
+
 .atkback.atkback {background-color: #eb5628}
 .spcback.spcback {background-color: #375ab2}
 .staback.staback {background-color: #828282}
@@ -168,6 +189,13 @@ form.trainer, form.item, button.item {
 }
 .gridrow50 {
     grid-template-columns: 50% 50%;
+}
+.PCsheet.gridrow50.gridrow50 {
+    grid-template-columns: 50% 50%;
+    display:grid;
+    align-items:center;
+    text-align: justify;
+    max-width: none;
 }
 .sidebar.item {
     justify-content: center;

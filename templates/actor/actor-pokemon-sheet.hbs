@@ -1,99 +1,95 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-
-  {{!-- Sheet Header --}}
-  <header class="sheet-header">
-
-      {{!-- Image --}}
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-
-      {{!-- Name/basic Stats Info --}}
-    <div class="header-fields">
-      <h1 class="charname">
-         {{!-- PC Name selector --}}
-      <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
-      </h1>
-
-      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-      use both the "grid" and "grid-Ncol" class where "N" can be any number
-      from 1 to 12 and will create that number of columns.  --}}
-      <div class="resources grid grid-3col">
-
-        {{!-- "flex-group-center" is also defined in the _grid.scss file
-        and it will add a small amount of padding, a border, and will
-        center all of its child elements content and text. --}}
-        <div class="resource flex-group-center">
-          <label for="system.health.value" class="resource-label">Health</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
-          </div>
-        </div>
+<form class="{{cssClass}} {{actor.type}} {{system.primarytyping}}backround gridcontainer" autocomplete="off">
 
 
-
-      </div>
-    </div>
-
-  </header>
-
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
+<div>
+   {{!-- Sheet Tab Navigation --}}
+  <nav class="{{system.primarytyping}}back trainer navigationselection sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="features">Features</a>
-    <a class="item" data-tab="description">Biography</a>
-    <a class="item" data-tab="items">Items</a>
-    {{!-- Commenting out spells  <a class="item" data-tab="spells">Spells</a>    --}} 
-    <a class="item" data-tab="effects">Effects</a>
+    <a class="darkinput" data-tab="combat">Combat</a> /
+    <a class="darkinput" data-tab="contest">Contest</a> /
+    <a class="darkinput" data-tab="description">Description</a>
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
-    {{!-- Owned Features Tab --}}
-    <div class="tab features" data-group="primary" data-tab="features">
-      <section class="grid grid-3col">
-        <aside class="sidebar">
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  --}}
-          <div class="stats flexcol">
-            {{#each system.stats as |stat key|}}
-            <div class="stat flexrow flex-group-center">
-              <label for="system.stats.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
-              <input type="text" name="system.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
-              <span class="stat-mod rollable" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
-            </div>
-            {{/each}}
-          </div>
-        </aside>
 
-        {{!-- For the main features list, span the right two columns --}}
-        <section class="main grid-span-2">
-          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
-          {{> "systems/pokemonta3/templates/actor/parts/actor-features.hbs"}}
-        </section>
+    {{!-- Combat Tab --}}
+    <div class="tab features" data-group="primary" data-tab="combat">
+      <p class="darktrimmedfont skillfeaturetitle"> Held Item</p>
+      {{> "systems/pokemonta3/templates/actor/parts/actor-held-item.hbs"}}
 
-      </section>
     </div>
 
-    {{!-- Biography Tab --}}
-    <div class="tab biography" data-group="primary" data-tab="description">
-      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-      {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+    {{!-- Contest Tab --}}
+    <div class="tab features" data-group="primary" data-tab="contest">
+      <p class="darktrimmedfont skillfeaturetitle"> Held Item</p>
+      {{> "systems/pokemonta3/templates/actor/parts/actor-held-item.hbs"}}
+
     </div>
 
-    {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/pokemonta3/templates/actor/parts/actor-items.hbs"}}
+    {{!-- Description Tab --}}
+    <div class="tab features" data-group="primary" data-tab="description">
+
     </div>
 
-    {{!-- Active Effects Tab --}}
-    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-      {{> "systems/pokemonta3/templates/actor/parts/actor-effects.hbs"}}
-    </div>
 
   </section>
+</div>
+
+  <div class="sidebar width172"> {{!-- Side Bar--}}
+    {{!-- Pokemon image --}}
+    <img class="{{system.primarytyping}}back PCsheet" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="170"/>  
+
+    {{!-- Pokemon Name --}}
+    <input class="PCsheet lighttrimmedfont" name="name" type="text" value="{{actor.name}}" placeholder="Pokemon Name"/>
+
+    {{!-- Pokemon HP --}}
+    <div class="PCsheet HPrimmedfont">
+      HP
+      <input class="HPrimmedfont" name="system.health.value" type="text" value="{{system.health.value}}"/>
+      /
+      <input class="HPrimmedfont" name="system.health.max" type="text" value="{{system.health.max}}"/>
+    </div>
+
+
+    {{!-- Pokemon Stats --}}
+    <div class="statbox {{system.primarytyping}}Clsfont">
+      {{#each system.stats as |stat key|}}
+      <div class="stats">
+        <label class="statname rollable" id="rollable" for="system.stats.{{key}}.value"  data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{stat.label}}</label>
+        <input class="statinput" type="text" name="system.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
+        <span class="stat-mod rollable" id="rollable" data-roll="d20+@stats.{{key}}.mod" data-label="{{stat.label}}">{{numberFormat stat.mod decimals=0 sign=true}}</span>
+      </div>
+      {{/each}}
+    </div>
+    {{!-- Typing Selections --}} 
+    <h1 class="lighttrimmedfont PCsheet gridrow50">  
+      <select class="{{system.primarytyping}}back" name="system.primarytyping">
+        {{selectOptions optionObjtype selected=system.primarytyping localize=true}}
+      </select>
+      <select class="{{system.secondarytyping}}back" name="system.secondarytyping">
+        {{selectOptions optionObjtype selected=system.secondarytyping localize=true}}
+      </select>
+    </h1>
+
+
+        {{!-- Other Classes --}}
+    <input class="PCsheet {{system.primarytyping}}back" name="system.species" type="text" value="{{system.species}}" placeholder="Species"/>
+    <input class="PCsheet {{system.primarytyping}}back" name="system.sex" type="text" value="{{system.sex}}" placeholder="Gender"/>
+    <select class="lighttrimmedfont PCsheet naturePoke" name="system.nature">
+      {{selectOptions optionObjnature selected=system.nature localize=true}}
+    </select>
+    <div class="PCsheet {{system.primarytyping}}Clsfont lighttrimmedfont gridrow50">
+    Loyalty
+    <input class="origincredit PCsheet {{system.primarytyping}}Clsfont" id="darkinput" name="system.loyalty" type="text" value="{{system.loyalty}}" placeholder="0"/>         
+    </div>  
+  </div>
+
+
+
+
+
 </form>
 
 {{log system}}

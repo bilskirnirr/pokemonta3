@@ -102,26 +102,33 @@
     },
     "pokemon": {
       "templates": ["base"],
-      "species" : " ",
-      "sex" : " ",
+      "species" : "",
+      "sex" : "",
       "primarytyping": "None",
       "secondarytyping:": "None",
-      "diet": " ",
-      "egggroup": "mystery",
+      "nature": "",
+      "size": "",
+      "weight":"",
+      "diet": "",
+      "egggroup": "",
+      "loyalty": "",
       "contest": {
-        "atk": {
+        "bty": {
           "value": 0
         },
-        "satk": {
+        "clv": {
           "value": 0
         },
-        "def": {
+        "cut": {
           "value": 0
         },
-        "sdef": {
+        "col": {
           "value": 0
         },
-        "spd": {
+        "tgh": {
+          "value": 0
+        },
+        "tot": {
           "value": 0
         }
       },

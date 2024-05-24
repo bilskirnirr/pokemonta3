@@ -7,6 +7,7 @@
   src: url("fonts/Pokemon Classic.ttf");
 }
 form.trainer,
+form.pokemon,
 form.item,
 button.item {
   font-family: pokemonClassic, pokemonXandY;
@@ -74,7 +75,7 @@ button.item {
   background-color: #a894ef;
 }
 .psyback.psyback {
-  background-color: #ee96ee;
+  background-color: #e16887;
 }
 .bugback.bugback {
   background-color: #abba38;
@@ -142,7 +143,7 @@ button.item {
   text-shadow: 1px 1px #686868;
 }
 .psyClsfont.psyClsfont {
-  color: #ee96ee;
+  color: #e16887;
   text-shadow: 1px 1px #686868;
 }
 .bugClsfont.bugClsfont {
@@ -172,6 +173,63 @@ button.item {
 .faiClsfont.faiClsfont {
   color: #df83be;
   text-shadow: 1px 1px #686868;
+}
+.nonbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - None.png");
+}
+.norbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Normal.png");
+}
+.firbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Fire.png");
+}
+.watbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Water.png");
+}
+.elebackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Electric.png");
+}
+.grabackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Grass.png");
+}
+.icebackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Ice.png");
+}
+.figbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Fighting.png");
+}
+.poibackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Posion.png");
+}
+.grobackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Ground.png");
+}
+.flybackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Flying.png");
+}
+.psybackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Psychic.png");
+}
+.bugbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Bug.png");
+}
+.rocbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Rock.png");
+}
+.ghobackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Ghost.png");
+}
+.drabackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Dragon.png");
+}
+.darbackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Dark.png");
+}
+.stebackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Steel.png");
+}
+.faibackround {
+  background-image: url("assets/PokemonSheets/TypeBackground - Fairy.png");
 }
 .atkback.atkback {
   background-color: #eb5628;
@@ -217,6 +275,13 @@ button.item {
 .gridrow50 {
   grid-template-columns: 50% 50%;
 }
+.PCsheet.gridrow50.gridrow50 {
+  grid-template-columns: 50% 50%;
+  display: grid;
+  align-items: center;
+  text-align: justify;
+  max-width: none;
+}
 .sidebar.item {
   justify-content: center;
   display: grid;
@@ -243,7 +308,7 @@ select.darktrimmedfont {
 }
 .pokemonta3.sheet.item {
   width: 570px !important;
-  max-height: 300px !important;
+  height: unset !important;
 }
 .pokeitembackground {
   background-image: url("assets/PokemonSheets/pokeItem5.png");
@@ -338,14 +403,14 @@ element.style.item {
 .marbackround {
   background-image: url("assets/PokemonSheets/CharBackground-mar.png");
 }
-.psyback.psyback {
+.psyback.psyback.trainer {
   background-color: #ee96ee;
 }
-.psyClsfont.psyClsfont {
+.psyClsfont.psyClsfont.trainer {
   color: #ee96ee;
   text-shadow: 1px 1px #686868;
 }
-.psybackround {
+.psybackround.trainer {
   background-image: url("assets/PokemonSheets/CharBackground-psy.png");
 }
 .pokback.pokback.pokback {
@@ -485,6 +550,13 @@ input#nature {
 }
 .item-controls {
   text-align: end;
+}
+.sidebar.width172 {
+  width: 172px;
+}
+select.naturePoke {
+  width: 170px;
+  height: 30px;
 }
 ol {
   padding-left: 2px;
