@@ -133,9 +133,9 @@
         }
       },
       "helditem": "None",
-      "skills": "None",
-      "statpassives": "None",
-      "abilitypassives": "None",
+      "skills": "",
+      "statpassives": "",
+      "abilitypassives": "",
       "moves": "None"
     }
 

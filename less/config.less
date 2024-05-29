@@ -62,6 +62,13 @@ form.trainer, form.pokemon, form.item, button.item {
 @pst-color: #ee96ee;
 @pok-color: #111111;
 
+//Contest Colors:
+@bty-color:#6d9eeb;
+@clv-color:#98d784;
+@cut-color:#f091c2;
+@col-color:#ff0000;
+@tgh-color:#e69138;
+
 
 /* Global styles */
 
@@ -134,6 +141,12 @@ form.trainer, form.pokemon, form.item, button.item {
 .steClsfont.steClsfont {color: @ste-color; text-shadow: 1px 1px @font-shadow-light; }
 .faiClsfont.faiClsfont {color: @fai-color; text-shadow: 1px 1px @font-shadow-light; }
 
+.btyback.btyback {background-color: @bty-color}
+.clvback.clvback {background-color: @clv-color}
+.cutback.cutback {background-color: @cut-color}
+.colback.colback {background-color: @col-color}
+.tghback.tghback {background-color: @tgh-color}
+
 .nonbackround {background-image:  url("assets/PokemonSheets/TypeBackground - None.png")}
 .norbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Normal.png")}
 .firbackround {background-image:  url("assets/PokemonSheets/TypeBackground - Fire.png")}
@@ -165,14 +178,17 @@ form.trainer, form.pokemon, form.item, button.item {
     background-image: none;
 }
 
-.gridrow30, .gridrow30-60, .gridrow20-30-30, .gridrow80-20, .gridrow15-35-30, .pix185-250, .gridrow50  {
+.gridrow30, .gridrow30-60, .gridrow20-30-30, .gridrow80-20, .gridrow15-35-30, .pix185-250, .gridrow50, .gridrow20-30-30-20  {
     display:grid;
     align-items:center;
     text-align: justify;
     max-width: none;
 }
 .gridrow30 {
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 33% 34% 33%;
+}
+.gridrow20-30-30-20 {
+    grid-template-columns: 20% 30% 30% 20%;
 }
 .gridrow30-60{
     grid-template-columns: 30% 60%;
@@ -203,4 +219,8 @@ form.trainer, form.pokemon, form.item, button.item {
 }
 .pix185-250 {
     grid-template-columns: 185px 365px;
+}
+.gridrow80-20.textcenter {
+    justify-content: center;
+    text-align: center;
 }

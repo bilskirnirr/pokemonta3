@@ -6,7 +6,6 @@
   <nav class="{{system.primarytyping}}back trainer navigationselection sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="darkinput" data-tab="combat">Combat</a> /
-    <a class="darkinput" data-tab="contest">Contest</a> /
     <a class="darkinput" data-tab="description">Description</a>
   </nav>
 
@@ -18,19 +17,29 @@
     <div class="tab features" data-group="primary" data-tab="combat">
       <p class="darktrimmedfont skillfeaturetitle"> Held Item</p>
       {{> "systems/pokemonta3/templates/actor/parts/actor-held-item.hbs"}}
-
-    </div>
-
-    {{!-- Contest Tab --}}
-    <div class="tab features" data-group="primary" data-tab="contest">
-      <p class="darktrimmedfont skillfeaturetitle"> Held Item</p>
-      {{> "systems/pokemonta3/templates/actor/parts/actor-held-item.hbs"}}
-
+      {{> "systems/pokemonta3/templates/actor/parts/actor-poke-moves.hbs"}}
+      <p class="darktrimmedfont skillfeaturetitle"> Skills</p>
+      <input class="{{system.primarytyping}}back" name="system.skills" type="text" value="{{system.skills}}" placeholder="Skills"/>
+      {{> "systems/pokemonta3/templates/actor/parts/actor-features.hbs"}}
     </div>
 
     {{!-- Description Tab --}}
     <div class="tab features" data-group="primary" data-tab="description">
 
+    <p class="darktrimmedfont skillfeaturetitle"> Contest</p>
+    <div class="gridrow30">
+      <div class="btyback textcenter darktrimmedfont gridrow80-20">Beauty <input name="system.contest.bty.value" type="text" value="{{system.contest.bty.value}}"/></div>
+      <div class="clvback textcenter darktrimmedfont gridrow80-20">Clever <input name="system.contest.clv.value" type="text" value="{{system.contest.clv.value}}"/></div>
+      <div class="cutback textcenter darktrimmedfont gridrow80-20">Cute   <input name="system.contest.cut.value" type="text" value="{{system.contest.cut.value}}"/></div>
+    </div>
+    <div class="gridrow20-30-30-20">
+      <div></div>
+      <div class="colback textcenter darktrimmedfont gridrow80-20">Cool   <input name="system.contest.col.value" type="text" value="{{system.contest.col.value}}"/></div>      
+      <div class="tghback textcenter darktrimmedfont gridrow80-20">Tough  <input name="system.contest.tgh.value" type="text" value="{{system.contest.tgh.value}}"/></div>
+    </div>  
+
+    <p class="darktrimmedfont skillfeaturetitle"> Description</p>
+     {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
 
