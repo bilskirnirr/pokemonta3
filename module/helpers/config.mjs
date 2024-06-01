@@ -186,3 +186,4 @@ pokemonta3.skillAbbreviations = {
   sloh: 'pokemonta3.Skills.sloh',
   stea: 'pokemonta3.Skills.stea',
 };
+
