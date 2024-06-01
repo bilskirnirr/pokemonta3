@@ -1,14 +1,14 @@
 {
   "id": "pokemonta3",
-  "title": "pokemonta3",
-  "description": "The pokemonta3 system for FoundryVTT!",
+  "title": "Pokemon Tabletop Adventures 3",
+  "description": "Unofficial Foundry System for  PTA3.",
   "authors": [
     {
       "name": "Bilskirnir",
       "discord": "Bilskirnir"
     }
   ],
-  "url": "Replace this with a link to your public repository",
+  "url": "https://github.com/bilskirnirr/pokemonta3",
   "license": "LICENSE.txt",
   "readme": "README.md",
   "bugs": "Replace this with a link to file issues or tickets",
@@ -20,7 +20,7 @@
       "thumbnail": "systems/pokemonta3/assets/PTA3_Foundry_Icon.png"
     }
   ],
-  "version": "2.0.0",
+  "version": "0.5.0",
   "compatibility": {
     "minimum": 11,
     "verified": "11.315"
@@ -37,8 +37,8 @@
   "packs": [],
   "packFolders": [],
   "socket": false,
-  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
-  "download": "This must link to a .zip file of the current version",
+  "manifest": "https://github.com/bilskirnirr/pokemonta3/blob/main/system.json",
+  "download": "https://github.com/bilskirnirr/pokemonta3.git",
   "background": "systems/pokemonta3/assets/PTA3_Foundry_Icon.png",
   "gridDistance": 5,
   "gridUnits": "ft",
